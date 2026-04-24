@@ -1,5 +1,6 @@
 import React from 'react';
 import COUNTRY_OUTLINES from '../data/countryOutlines';
+import { getEndpoint } from '../config/api';
 
 interface PredictionResult {
   country: string;
@@ -42,7 +43,7 @@ const ResourcePlan = () => {
   React.useEffect(() => {
     const fetchPredictions = async () => {
       try {
-        const res = await fetch('/api/flask/api/predict-all?year=2026');
+        const res = await fetch(getEndpoint('/api/predict-all?year=2026'));
         if (res.ok) {
           const data = await res.json();
           setPredictions(data.filter((p: PredictionResult) => NEIGHBOR_COUNTRIES.includes(p.country)));
@@ -60,7 +61,7 @@ const ResourcePlan = () => {
   React.useEffect(() => {
     const fetchAlerts = async () => {
       try {
-        const res = await fetch('/api/flask/api/news');
+        const res = await fetch(getEndpoint('/api/news'));
         if (res.ok) {
           const data = await res.json();
           if (data.articles && Array.isArray(data.articles)) {

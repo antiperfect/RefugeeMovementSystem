@@ -1,5 +1,6 @@
 import { useEffect, useState, useMemo } from 'react';
 import unData from '../data/undata.json';
+import { getEndpoint } from '../config/api';
 
 interface PredictionResult {
   country: string;
@@ -44,7 +45,7 @@ const Predictions = () => {
       setLoading(true);
       setError(null);
       try {
-        const res = await fetch(`/api/flask/api/predict-all?year=${predictionYear}`);
+        const res = await fetch(getEndpoint(`/api/predict-all?year=${predictionYear}`));
         if (!res.ok) throw new Error(`API returned ${res.status}`);
         const data = await res.json();
         setPredictions(data);
