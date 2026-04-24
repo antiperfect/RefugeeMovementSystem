@@ -1,0 +1,2837 @@
+[
+  {
+    "origin": "Afghanistan",
+    "year": 2024,
+    "refugees": 8671
+  },
+  {
+    "origin": "Bangladesh",
+    "year": 2024,
+    "refugees": 9
+  },
+  {
+    "origin": "Cameroon",
+    "year": 2024,
+    "refugees": 80
+  },
+  {
+    "origin": "China",
+    "year": 2024,
+    "refugees": 63169
+  },
+  {
+    "origin": "Dem. Rep. of the Congo",
+    "year": 2024,
+    "refugees": 80
+  },
+  {
+    "origin": "Eritrea",
+    "year": 2024,
+    "refugees": 8
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 2024,
+    "refugees": 23
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 2024,
+    "refugees": 50
+  },
+  {
+    "origin": "Iraq",
+    "year": 2024,
+    "refugees": 92
+  },
+  {
+    "origin": "Maldives",
+    "year": 2024,
+    "refugees": 5
+  },
+  {
+    "origin": "Myanmar",
+    "year": 2024,
+    "refugees": 23915
+  },
+  {
+    "origin": "Rwanda",
+    "year": 2024,
+    "refugees": 5
+  },
+  {
+    "origin": "Somalia",
+    "year": 2024,
+    "refugees": 508
+  },
+  {
+    "origin": "South Sudan",
+    "year": 2024,
+    "refugees": 10
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 2024,
+    "refugees": 90365
+  },
+  {
+    "origin": "State of Palestine",
+    "year": 2024,
+    "refugees": 37
+  },
+  {
+    "origin": "Sudan",
+    "year": 2024,
+    "refugees": 200
+  },
+  {
+    "origin": "Syrian Arab Rep.",
+    "year": 2024,
+    "refugees": 46
+  },
+  {
+    "origin": "Tajikistan",
+    "year": 2024,
+    "refugees": 5
+  },
+  {
+    "origin": "Türkiye",
+    "year": 2024,
+    "refugees": 5
+  },
+  {
+    "origin": "Uganda",
+    "year": 2024,
+    "refugees": 5
+  },
+  {
+    "origin": "Venezuela (Bolivarian Republic of)",
+    "year": 2024,
+    "refugees": 5
+  },
+  {
+    "origin": "Yemen",
+    "year": 2024,
+    "refugees": 559
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 2023,
+    "refugees": 10109
+  },
+  {
+    "origin": "Bangladesh",
+    "year": 2023,
+    "refugees": 12
+  },
+  {
+    "origin": "Cameroon",
+    "year": 2023,
+    "refugees": 64
+  },
+  {
+    "origin": "China",
+    "year": 2023,
+    "refugees": 73406
+  },
+  {
+    "origin": "Congo, Republic of",
+    "year": 2023,
+    "refugees": 6
+  },
+  {
+    "origin": "Côte d'Ivoire",
+    "year": 2023,
+    "refugees": 5
+  },
+  {
+    "origin": "Dem. Rep. of the Congo",
+    "year": 2023,
+    "refugees": 91
+  },
+  {
+    "origin": "Eritrea",
+    "year": 2023,
+    "refugees": 9
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 2023,
+    "refugees": 24
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 2023,
+    "refugees": 56
+  },
+  {
+    "origin": "Iraq",
+    "year": 2023,
+    "refugees": 116
+  },
+  {
+    "origin": "Maldives",
+    "year": 2023,
+    "refugees": 5
+  },
+  {
+    "origin": "Myanmar",
+    "year": 2023,
+    "refugees": 22852
+  },
+  {
+    "origin": "Rwanda",
+    "year": 2023,
+    "refugees": 5
+  },
+  {
+    "origin": "Saudi Arabia",
+    "year": 2023,
+    "refugees": 5
+  },
+  {
+    "origin": "Somalia",
+    "year": 2023,
+    "refugees": 533
+  },
+  {
+    "origin": "South Sudan",
+    "year": 2023,
+    "refugees": 5
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 2023,
+    "refugees": 91166
+  },
+  {
+    "origin": "State of Palestine",
+    "year": 2023,
+    "refugees": 47
+  },
+  {
+    "origin": "Sudan",
+    "year": 2023,
+    "refugees": 151
+  },
+  {
+    "origin": "Syrian Arab Rep.",
+    "year": 2023,
+    "refugees": 56
+  },
+  {
+    "origin": "Tajikistan",
+    "year": 2023,
+    "refugees": 5
+  },
+  {
+    "origin": "Türkiye",
+    "year": 2023,
+    "refugees": 5
+  },
+  {
+    "origin": "Venezuela (Bolivarian Republic of)",
+    "year": 2023,
+    "refugees": 5
+  },
+  {
+    "origin": "Yemen",
+    "year": 2023,
+    "refugees": 468
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 2022,
+    "refugees": 9858
+  },
+  {
+    "origin": "Bangladesh",
+    "year": 2022,
+    "refugees": 8
+  },
+  {
+    "origin": "Cameroon",
+    "year": 2022,
+    "refugees": 31
+  },
+  {
+    "origin": "China",
+    "year": 2022,
+    "refugees": 72294
+  },
+  {
+    "origin": "Congo, Republic of",
+    "year": 2022,
+    "refugees": 11
+  },
+  {
+    "origin": "Côte d'Ivoire",
+    "year": 2022,
+    "refugees": 5
+  },
+  {
+    "origin": "Dem. Rep. of the Congo",
+    "year": 2022,
+    "refugees": 76
+  },
+  {
+    "origin": "Eritrea",
+    "year": 2022,
+    "refugees": 13
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 2022,
+    "refugees": 26
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 2022,
+    "refugees": 60
+  },
+  {
+    "origin": "Iraq",
+    "year": 2022,
+    "refugees": 137
+  },
+  {
+    "origin": "Libya",
+    "year": 2022,
+    "refugees": 8
+  },
+  {
+    "origin": "Maldives",
+    "year": 2022,
+    "refugees": 5
+  },
+  {
+    "origin": "Myanmar",
+    "year": 2022,
+    "refugees": 22233
+  },
+  {
+    "origin": "Rwanda",
+    "year": 2022,
+    "refugees": 5
+  },
+  {
+    "origin": "Saudi Arabia",
+    "year": 2022,
+    "refugees": 5
+  },
+  {
+    "origin": "Somalia",
+    "year": 2022,
+    "refugees": 508
+  },
+  {
+    "origin": "South Sudan",
+    "year": 2022,
+    "refugees": 5
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 2022,
+    "refugees": 92072
+  },
+  {
+    "origin": "State of Palestine",
+    "year": 2022,
+    "refugees": 48
+  },
+  {
+    "origin": "Sudan",
+    "year": 2022,
+    "refugees": 82
+  },
+  {
+    "origin": "Syrian Arab Rep.",
+    "year": 2022,
+    "refugees": 71
+  },
+  {
+    "origin": "Türkiye",
+    "year": 2022,
+    "refugees": 5
+  },
+  {
+    "origin": "Venezuela (Bolivarian Republic of)",
+    "year": 2022,
+    "refugees": 5
+  },
+  {
+    "origin": "Yemen",
+    "year": 2022,
+    "refugees": 15
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 2021,
+    "refugees": 9678
+  },
+  {
+    "origin": "Bangladesh",
+    "year": 2021,
+    "refugees": 8
+  },
+  {
+    "origin": "Cameroon",
+    "year": 2021,
+    "refugees": 17
+  },
+  {
+    "origin": "China",
+    "year": 2021,
+    "refugees": 73407
+  },
+  {
+    "origin": "Congo, Republic of",
+    "year": 2021,
+    "refugees": 8
+  },
+  {
+    "origin": "Côte d'Ivoire",
+    "year": 2021,
+    "refugees": 5
+  },
+  {
+    "origin": "Dem. Rep. of the Congo",
+    "year": 2021,
+    "refugees": 54
+  },
+  {
+    "origin": "Eritrea",
+    "year": 2021,
+    "refugees": 13
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 2021,
+    "refugees": 23
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 2021,
+    "refugees": 58
+  },
+  {
+    "origin": "Iraq",
+    "year": 2021,
+    "refugees": 150
+  },
+  {
+    "origin": "Libya",
+    "year": 2021,
+    "refugees": 8
+  },
+  {
+    "origin": "Maldives",
+    "year": 2021,
+    "refugees": 5
+  },
+  {
+    "origin": "Myanmar",
+    "year": 2021,
+    "refugees": 20754
+  },
+  {
+    "origin": "Rwanda",
+    "year": 2021,
+    "refugees": 5
+  },
+  {
+    "origin": "Saudi Arabia",
+    "year": 2021,
+    "refugees": 5
+  },
+  {
+    "origin": "Somalia",
+    "year": 2021,
+    "refugees": 497
+  },
+  {
+    "origin": "South Sudan",
+    "year": 2021,
+    "refugees": 5
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 2021,
+    "refugees": 92431
+  },
+  {
+    "origin": "State of Palestine",
+    "year": 2021,
+    "refugees": 52
+  },
+  {
+    "origin": "Sudan",
+    "year": 2021,
+    "refugees": 61
+  },
+  {
+    "origin": "Syrian Arab Rep.",
+    "year": 2021,
+    "refugees": 69
+  },
+  {
+    "origin": "Türkiye",
+    "year": 2021,
+    "refugees": 8
+  },
+  {
+    "origin": "Venezuela (Bolivarian Republic of)",
+    "year": 2021,
+    "refugees": 5
+  },
+  {
+    "origin": "Yemen",
+    "year": 2021,
+    "refugees": 9
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 2020,
+    "refugees": 8275
+  },
+  {
+    "origin": "Bangladesh",
+    "year": 2020,
+    "refugees": 8
+  },
+  {
+    "origin": "China",
+    "year": 2020,
+    "refugees": 73407
+  },
+  {
+    "origin": "Congo, Republic of",
+    "year": 2020,
+    "refugees": 8
+  },
+  {
+    "origin": "Côte d'Ivoire",
+    "year": 2020,
+    "refugees": 5
+  },
+  {
+    "origin": "Dem. Rep. of the Congo",
+    "year": 2020,
+    "refugees": 49
+  },
+  {
+    "origin": "Eritrea",
+    "year": 2020,
+    "refugees": 9
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 2020,
+    "refugees": 15
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 2020,
+    "refugees": 49
+  },
+  {
+    "origin": "Iraq",
+    "year": 2020,
+    "refugees": 153
+  },
+  {
+    "origin": "Libya",
+    "year": 2020,
+    "refugees": 8
+  },
+  {
+    "origin": "Maldives",
+    "year": 2020,
+    "refugees": 5
+  },
+  {
+    "origin": "Myanmar",
+    "year": 2020,
+    "refugees": 19398
+  },
+  {
+    "origin": "Rwanda",
+    "year": 2020,
+    "refugees": 5
+  },
+  {
+    "origin": "Saudi Arabia",
+    "year": 2020,
+    "refugees": 5
+  },
+  {
+    "origin": "Somalia",
+    "year": 2020,
+    "refugees": 514
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 2020,
+    "refugees": 93259
+  },
+  {
+    "origin": "State of Palestine",
+    "year": 2020,
+    "refugees": 58
+  },
+  {
+    "origin": "Sudan",
+    "year": 2020,
+    "refugees": 65
+  },
+  {
+    "origin": "Syrian Arab Rep.",
+    "year": 2020,
+    "refugees": 63
+  },
+  {
+    "origin": "Türkiye",
+    "year": 2020,
+    "refugees": 5
+  },
+  {
+    "origin": "Venezuela (Bolivarian Republic of)",
+    "year": 2020,
+    "refugees": 5
+  },
+  {
+    "origin": "Yemen",
+    "year": 2020,
+    "refugees": 5
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 2019,
+    "refugees": 7470
+  },
+  {
+    "origin": "China",
+    "year": 2019,
+    "refugees": 108008
+  },
+  {
+    "origin": "Congo, Republic of",
+    "year": 2019,
+    "refugees": 5
+  },
+  {
+    "origin": "Côte d'Ivoire",
+    "year": 2019,
+    "refugees": 5
+  },
+  {
+    "origin": "Dem. Rep. of the Congo",
+    "year": 2019,
+    "refugees": 42
+  },
+  {
+    "origin": "Eritrea",
+    "year": 2019,
+    "refugees": 7
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 2019,
+    "refugees": 18
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 2019,
+    "refugees": 49
+  },
+  {
+    "origin": "Iraq",
+    "year": 2019,
+    "refugees": 172
+  },
+  {
+    "origin": "Libya",
+    "year": 2019,
+    "refugees": 8
+  },
+  {
+    "origin": "Maldives",
+    "year": 2019,
+    "refugees": 5
+  },
+  {
+    "origin": "Myanmar",
+    "year": 2019,
+    "refugees": 2574
+  },
+  {
+    "origin": "Rwanda",
+    "year": 2019,
+    "refugees": 5
+  },
+  {
+    "origin": "Saudi Arabia",
+    "year": 2019,
+    "refugees": 5
+  },
+  {
+    "origin": "Somalia",
+    "year": 2019,
+    "refugees": 533
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 2019,
+    "refugees": 59428
+  },
+  {
+    "origin": "State of Palestine",
+    "year": 2019,
+    "refugees": 72
+  },
+  {
+    "origin": "Stateless",
+    "year": 2019,
+    "refugees": 16524
+  },
+  {
+    "origin": "Sudan",
+    "year": 2019,
+    "refugees": 69
+  },
+  {
+    "origin": "Syrian Arab Rep.",
+    "year": 2019,
+    "refugees": 70
+  },
+  {
+    "origin": "Türkiye",
+    "year": 2019,
+    "refugees": 29
+  },
+  {
+    "origin": "Yemen",
+    "year": 2019,
+    "refugees": 5
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 2018,
+    "refugees": 6984
+  },
+  {
+    "origin": "China",
+    "year": 2018,
+    "refugees": 108008
+  },
+  {
+    "origin": "Congo, Republic of",
+    "year": 2018,
+    "refugees": 5
+  },
+  {
+    "origin": "Côte d'Ivoire",
+    "year": 2018,
+    "refugees": 5
+  },
+  {
+    "origin": "Dem. Rep. of the Congo",
+    "year": 2018,
+    "refugees": 43
+  },
+  {
+    "origin": "Eritrea",
+    "year": 2018,
+    "refugees": 15
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 2018,
+    "refugees": 20
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 2018,
+    "refugees": 53
+  },
+  {
+    "origin": "Iraq",
+    "year": 2018,
+    "refugees": 277
+  },
+  {
+    "origin": "Maldives",
+    "year": 2018,
+    "refugees": 5
+  },
+  {
+    "origin": "Myanmar",
+    "year": 2018,
+    "refugees": 18813
+  },
+  {
+    "origin": "Rwanda",
+    "year": 2018,
+    "refugees": 5
+  },
+  {
+    "origin": "Saudi Arabia",
+    "year": 2018,
+    "refugees": 5
+  },
+  {
+    "origin": "Somalia",
+    "year": 2018,
+    "refugees": 608
+  },
+  {
+    "origin": "South Sudan",
+    "year": 2018,
+    "refugees": 5
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 2018,
+    "refugees": 60802
+  },
+  {
+    "origin": "State of Palestine",
+    "year": 2018,
+    "refugees": 73
+  },
+  {
+    "origin": "Sudan",
+    "year": 2018,
+    "refugees": 78
+  },
+  {
+    "origin": "Syrian Arab Rep.",
+    "year": 2018,
+    "refugees": 83
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 2017,
+    "refugees": 7758
+  },
+  {
+    "origin": "China",
+    "year": 2017,
+    "refugees": 108008
+  },
+  {
+    "origin": "Côte d'Ivoire",
+    "year": 2017,
+    "refugees": 5
+  },
+  {
+    "origin": "Dem. Rep. of the Congo",
+    "year": 2017,
+    "refugees": 49
+  },
+  {
+    "origin": "Eritrea",
+    "year": 2017,
+    "refugees": 29
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 2017,
+    "refugees": 20
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 2017,
+    "refugees": 57
+  },
+  {
+    "origin": "Iraq",
+    "year": 2017,
+    "refugees": 344
+  },
+  {
+    "origin": "Maldives",
+    "year": 2017,
+    "refugees": 5
+  },
+  {
+    "origin": "Myanmar",
+    "year": 2017,
+    "refugees": 18089
+  },
+  {
+    "origin": "Rwanda",
+    "year": 2017,
+    "refugees": 5
+  },
+  {
+    "origin": "Saudi Arabia",
+    "year": 2017,
+    "refugees": 5
+  },
+  {
+    "origin": "Somalia",
+    "year": 2017,
+    "refugees": 664
+  },
+  {
+    "origin": "South Sudan",
+    "year": 2017,
+    "refugees": 6
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 2017,
+    "refugees": 61842
+  },
+  {
+    "origin": "State of Palestine",
+    "year": 2017,
+    "refugees": 75
+  },
+  {
+    "origin": "Sudan",
+    "year": 2017,
+    "refugees": 89
+  },
+  {
+    "origin": "Syrian Arab Rep.",
+    "year": 2017,
+    "refugees": 87
+  },
+  {
+    "origin": "Yemen",
+    "year": 2017,
+    "refugees": 5
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 2016,
+    "refugees": 7693
+  },
+  {
+    "origin": "China",
+    "year": 2016,
+    "refugees": 110098
+  },
+  {
+    "origin": "Côte d'Ivoire",
+    "year": 2016,
+    "refugees": 7
+  },
+  {
+    "origin": "Dem. Rep. of the Congo",
+    "year": 2016,
+    "refugees": 50
+  },
+  {
+    "origin": "Eritrea",
+    "year": 2016,
+    "refugees": 38
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 2016,
+    "refugees": 21
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 2016,
+    "refugees": 65
+  },
+  {
+    "origin": "Iraq",
+    "year": 2016,
+    "refugees": 363
+  },
+  {
+    "origin": "Libya",
+    "year": 2016,
+    "refugees": 5
+  },
+  {
+    "origin": "Maldives",
+    "year": 2016,
+    "refugees": 5
+  },
+  {
+    "origin": "Myanmar",
+    "year": 2016,
+    "refugees": 15561
+  },
+  {
+    "origin": "Rwanda",
+    "year": 2016,
+    "refugees": 5
+  },
+  {
+    "origin": "Saudi Arabia",
+    "year": 2016,
+    "refugees": 5
+  },
+  {
+    "origin": "Somalia",
+    "year": 2016,
+    "refugees": 554
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 2016,
+    "refugees": 63162
+  },
+  {
+    "origin": "State of Palestine",
+    "year": 2016,
+    "refugees": 68
+  },
+  {
+    "origin": "Sudan",
+    "year": 2016,
+    "refugees": 78
+  },
+  {
+    "origin": "Syrian Arab Rep.",
+    "year": 2016,
+    "refugees": 65
+  },
+  {
+    "origin": "Yemen",
+    "year": 2016,
+    "refugees": 5
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 2015,
+    "refugees": 10196
+  },
+  {
+    "origin": "China",
+    "year": 2015,
+    "refugees": 110098
+  },
+  {
+    "origin": "Côte d'Ivoire",
+    "year": 2015,
+    "refugees": 9
+  },
+  {
+    "origin": "Dem. Rep. of the Congo",
+    "year": 2015,
+    "refugees": 43
+  },
+  {
+    "origin": "Eritrea",
+    "year": 2015,
+    "refugees": 42
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 2015,
+    "refugees": 14
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 2015,
+    "refugees": 72
+  },
+  {
+    "origin": "Iraq",
+    "year": 2015,
+    "refugees": 287
+  },
+  {
+    "origin": "Maldives",
+    "year": 2015,
+    "refugees": 5
+  },
+  {
+    "origin": "Myanmar",
+    "year": 2015,
+    "refugees": 15735
+  },
+  {
+    "origin": "Rwanda",
+    "year": 2015,
+    "refugees": 5
+  },
+  {
+    "origin": "Saudi Arabia",
+    "year": 2015,
+    "refugees": 5
+  },
+  {
+    "origin": "Somalia",
+    "year": 2015,
+    "refugees": 465
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 2015,
+    "refugees": 64208
+  },
+  {
+    "origin": "State of Palestine",
+    "year": 2015,
+    "refugees": 79
+  },
+  {
+    "origin": "Sudan",
+    "year": 2015,
+    "refugees": 65
+  },
+  {
+    "origin": "Syrian Arab Rep.",
+    "year": 2015,
+    "refugees": 41
+  },
+  {
+    "origin": "Uzbekistan",
+    "year": 2015,
+    "refugees": 5
+  },
+  {
+    "origin": "Yemen",
+    "year": 2015,
+    "refugees": 5
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 2014,
+    "refugees": 10395
+  },
+  {
+    "origin": "China",
+    "year": 2014,
+    "refugees": 109018
+  },
+  {
+    "origin": "Côte d'Ivoire",
+    "year": 2014,
+    "refugees": 11
+  },
+  {
+    "origin": "Dem. Rep. of the Congo",
+    "year": 2014,
+    "refugees": 46
+  },
+  {
+    "origin": "Eritrea",
+    "year": 2014,
+    "refugees": 47
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 2014,
+    "refugees": 11
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 2014,
+    "refugees": 107
+  },
+  {
+    "origin": "Iraq",
+    "year": 2014,
+    "refugees": 115
+  },
+  {
+    "origin": "Maldives",
+    "year": 2014,
+    "refugees": 5
+  },
+  {
+    "origin": "Myanmar",
+    "year": 2014,
+    "refugees": 14301
+  },
+  {
+    "origin": "Rwanda",
+    "year": 2014,
+    "refugees": 5
+  },
+  {
+    "origin": "Somalia",
+    "year": 2014,
+    "refugees": 654
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 2014,
+    "refugees": 65057
+  },
+  {
+    "origin": "State of Palestine",
+    "year": 2014,
+    "refugees": 73
+  },
+  {
+    "origin": "Sudan",
+    "year": 2014,
+    "refugees": 49
+  },
+  {
+    "origin": "Syrian Arab Rep.",
+    "year": 2014,
+    "refugees": 27
+  },
+  {
+    "origin": "Uzbekistan",
+    "year": 2014,
+    "refugees": 5
+  },
+  {
+    "origin": "Yemen",
+    "year": 2014,
+    "refugees": 5
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 2013,
+    "refugees": 10328
+  },
+  {
+    "origin": "China",
+    "year": 2013,
+    "refugees": 100003
+  },
+  {
+    "origin": "Côte d'Ivoire",
+    "year": 2013,
+    "refugees": 14
+  },
+  {
+    "origin": "Dem. Rep. of the Congo",
+    "year": 2013,
+    "refugees": 42
+  },
+  {
+    "origin": "Eritrea",
+    "year": 2013,
+    "refugees": 61
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 2013,
+    "refugees": 9
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 2013,
+    "refugees": 121
+  },
+  {
+    "origin": "Iraq",
+    "year": 2013,
+    "refugees": 130
+  },
+  {
+    "origin": "Maldives",
+    "year": 2013,
+    "refugees": 5
+  },
+  {
+    "origin": "Myanmar",
+    "year": 2013,
+    "refugees": 11122
+  },
+  {
+    "origin": "Romania",
+    "year": 2013,
+    "refugees": 5
+  },
+  {
+    "origin": "Rwanda",
+    "year": 2013,
+    "refugees": 5
+  },
+  {
+    "origin": "Somalia",
+    "year": 2013,
+    "refugees": 729
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 2013,
+    "refugees": 65674
+  },
+  {
+    "origin": "State of Palestine",
+    "year": 2013,
+    "refugees": 68
+  },
+  {
+    "origin": "Sudan",
+    "year": 2013,
+    "refugees": 47
+  },
+  {
+    "origin": "Syrian Arab Rep.",
+    "year": 2013,
+    "refugees": 18
+  },
+  {
+    "origin": "Uzbekistan",
+    "year": 2013,
+    "refugees": 5
+  },
+  {
+    "origin": "Yemen",
+    "year": 2013,
+    "refugees": 5
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 2012,
+    "refugees": 9633
+  },
+  {
+    "origin": "China",
+    "year": 2012,
+    "refugees": 100003
+  },
+  {
+    "origin": "Côte d'Ivoire",
+    "year": 2012,
+    "refugees": 7
+  },
+  {
+    "origin": "Dem. Rep. of the Congo",
+    "year": 2012,
+    "refugees": 29
+  },
+  {
+    "origin": "Eritrea",
+    "year": 2012,
+    "refugees": 52
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 2012,
+    "refugees": 8
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 2012,
+    "refugees": 123
+  },
+  {
+    "origin": "Iraq",
+    "year": 2012,
+    "refugees": 113
+  },
+  {
+    "origin": "Myanmar",
+    "year": 2012,
+    "refugees": 7671
+  },
+  {
+    "origin": "Rwanda",
+    "year": 2012,
+    "refugees": 5
+  },
+  {
+    "origin": "Somalia",
+    "year": 2012,
+    "refugees": 739
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 2012,
+    "refugees": 67165
+  },
+  {
+    "origin": "State of Palestine",
+    "year": 2012,
+    "refugees": 60
+  },
+  {
+    "origin": "Sudan",
+    "year": 2012,
+    "refugees": 30
+  },
+  {
+    "origin": "Syrian Arab Rep.",
+    "year": 2012,
+    "refugees": 6
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 2011,
+    "refugees": 9161
+  },
+  {
+    "origin": "China",
+    "year": 2011,
+    "refugees": 100003
+  },
+  {
+    "origin": "Côte d'Ivoire",
+    "year": 2011,
+    "refugees": 5
+  },
+  {
+    "origin": "Dem. Rep. of the Congo",
+    "year": 2011,
+    "refugees": 14
+  },
+  {
+    "origin": "Eritrea",
+    "year": 2011,
+    "refugees": 50
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 2011,
+    "refugees": 10
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 2011,
+    "refugees": 99
+  },
+  {
+    "origin": "Iraq",
+    "year": 2011,
+    "refugees": 111
+  },
+  {
+    "origin": "Myanmar",
+    "year": 2011,
+    "refugees": 6621
+  },
+  {
+    "origin": "Pakistan",
+    "year": 2011,
+    "refugees": 23
+  },
+  {
+    "origin": "Rwanda",
+    "year": 2011,
+    "refugees": 5
+  },
+  {
+    "origin": "Somalia",
+    "year": 2011,
+    "refugees": 766
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 2011,
+    "refugees": 68152
+  },
+  {
+    "origin": "State of Palestine",
+    "year": 2011,
+    "refugees": 74
+  },
+  {
+    "origin": "Sudan",
+    "year": 2011,
+    "refugees": 19
+  },
+  {
+    "origin": "Uzbekistan",
+    "year": 2011,
+    "refugees": 5
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 2010,
+    "refugees": 9094
+  },
+  {
+    "origin": "China",
+    "year": 2010,
+    "refugees": 100003
+  },
+  {
+    "origin": "Dem. Rep. of the Congo",
+    "year": 2010,
+    "refugees": 11
+  },
+  {
+    "origin": "Eritrea",
+    "year": 2010,
+    "refugees": 35
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 2010,
+    "refugees": 9
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 2010,
+    "refugees": 69
+  },
+  {
+    "origin": "Iraq",
+    "year": 2010,
+    "refugees": 122
+  },
+  {
+    "origin": "Myanmar",
+    "year": 2010,
+    "refugees": 4630
+  },
+  {
+    "origin": "Somalia",
+    "year": 2010,
+    "refugees": 747
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 2010,
+    "refugees": 69998
+  },
+  {
+    "origin": "State of Palestine",
+    "year": 2010,
+    "refugees": 78
+  },
+  {
+    "origin": "Sudan",
+    "year": 2010,
+    "refugees": 18
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 2009,
+    "refugees": 8528
+  },
+  {
+    "origin": "China",
+    "year": 2009,
+    "refugees": 100003
+  },
+  {
+    "origin": "Dem. Rep. of the Congo",
+    "year": 2009,
+    "refugees": 7
+  },
+  {
+    "origin": "Eritrea",
+    "year": 2009,
+    "refugees": 16
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 2009,
+    "refugees": 7
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 2009,
+    "refugees": 46
+  },
+  {
+    "origin": "Iraq",
+    "year": 2009,
+    "refugees": 130
+  },
+  {
+    "origin": "Myanmar",
+    "year": 2009,
+    "refugees": 2952
+  },
+  {
+    "origin": "Somalia",
+    "year": 2009,
+    "refugees": 655
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 2009,
+    "refugees": 72883
+  },
+  {
+    "origin": "State of Palestine",
+    "year": 2009,
+    "refugees": 77
+  },
+  {
+    "origin": "Sudan",
+    "year": 2009,
+    "refugees": 14
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 2008,
+    "refugees": 8441
+  },
+  {
+    "origin": "China",
+    "year": 2008,
+    "refugees": 100003
+  },
+  {
+    "origin": "Dem. Rep. of the Congo",
+    "year": 2008,
+    "refugees": 6
+  },
+  {
+    "origin": "Eritrea",
+    "year": 2008,
+    "refugees": 14
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 2008,
+    "refugees": 5
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 2008,
+    "refugees": 62
+  },
+  {
+    "origin": "Iraq",
+    "year": 2008,
+    "refugees": 109
+  },
+  {
+    "origin": "Myanmar",
+    "year": 2008,
+    "refugees": 1967
+  },
+  {
+    "origin": "Somalia",
+    "year": 2008,
+    "refugees": 489
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 2008,
+    "refugees": 73286
+  },
+  {
+    "origin": "State of Palestine",
+    "year": 2008,
+    "refugees": 141
+  },
+  {
+    "origin": "Sudan",
+    "year": 2008,
+    "refugees": 16
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 2007,
+    "refugees": 9011
+  },
+  {
+    "origin": "China",
+    "year": 2007,
+    "refugees": 77200
+  },
+  {
+    "origin": "Dem. Rep. of the Congo",
+    "year": 2007,
+    "refugees": 6
+  },
+  {
+    "origin": "Eritrea",
+    "year": 2007,
+    "refugees": 5
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 2007,
+    "refugees": 45
+  },
+  {
+    "origin": "Iraq",
+    "year": 2007,
+    "refugees": 53
+  },
+  {
+    "origin": "Myanmar",
+    "year": 2007,
+    "refugees": 1812
+  },
+  {
+    "origin": "Somalia",
+    "year": 2007,
+    "refugees": 221
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 2007,
+    "refugees": 72934
+  },
+  {
+    "origin": "State of Palestine",
+    "year": 2007,
+    "refugees": 227
+  },
+  {
+    "origin": "Sudan",
+    "year": 2007,
+    "refugees": 15
+  },
+  {
+    "origin": "Syrian Arab Rep.",
+    "year": 2007,
+    "refugees": 5
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 2006,
+    "refugees": 9472
+  },
+  {
+    "origin": "China",
+    "year": 2006,
+    "refugees": 77200
+  },
+  {
+    "origin": "Dem. Rep. of the Congo",
+    "year": 2006,
+    "refugees": 6
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 2006,
+    "refugees": 44
+  },
+  {
+    "origin": "Iraq",
+    "year": 2006,
+    "refugees": 12
+  },
+  {
+    "origin": "Myanmar",
+    "year": 2006,
+    "refugees": 1812
+  },
+  {
+    "origin": "Somalia",
+    "year": 2006,
+    "refugees": 130
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 2006,
+    "refugees": 69609
+  },
+  {
+    "origin": "State of Palestine",
+    "year": 2006,
+    "refugees": 61
+  },
+  {
+    "origin": "Sudan",
+    "year": 2006,
+    "refugees": 12
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 2005,
+    "refugees": 9700
+  },
+  {
+    "origin": "China",
+    "year": 2005,
+    "refugees": 77200
+  },
+  {
+    "origin": "Eritrea",
+    "year": 2005,
+    "refugees": 5
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 2005,
+    "refugees": 41
+  },
+  {
+    "origin": "Iraq",
+    "year": 2005,
+    "refugees": 17
+  },
+  {
+    "origin": "Israel",
+    "year": 2005,
+    "refugees": 6
+  },
+  {
+    "origin": "Kazakhstan",
+    "year": 2005,
+    "refugees": 5
+  },
+  {
+    "origin": "Myanmar",
+    "year": 2005,
+    "refugees": 1471
+  },
+  {
+    "origin": "Somalia",
+    "year": 2005,
+    "refugees": 104
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 2005,
+    "refugees": 50730
+  },
+  {
+    "origin": "Sudan",
+    "year": 2005,
+    "refugees": 5
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 2004,
+    "refugees": 9761
+  },
+  {
+    "origin": "China",
+    "year": 2004,
+    "refugees": 94349
+  },
+  {
+    "origin": "Eritrea",
+    "year": 2004,
+    "refugees": 6
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 2004,
+    "refugees": 59
+  },
+  {
+    "origin": "Iraq",
+    "year": 2004,
+    "refugees": 20
+  },
+  {
+    "origin": "Israel",
+    "year": 2004,
+    "refugees": 7
+  },
+  {
+    "origin": "Kazakhstan",
+    "year": 2004,
+    "refugees": 5
+  },
+  {
+    "origin": "Liberia",
+    "year": 2004,
+    "refugees": 5
+  },
+  {
+    "origin": "Myanmar",
+    "year": 2004,
+    "refugees": 1162
+  },
+  {
+    "origin": "Somalia",
+    "year": 2004,
+    "refugees": 27
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 2004,
+    "refugees": 57274
+  },
+  {
+    "origin": "Sudan",
+    "year": 2004,
+    "refugees": 8
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 2003,
+    "refugees": 10283
+  },
+  {
+    "origin": "China",
+    "year": 2003,
+    "refugees": 92349
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 2003,
+    "refugees": 11
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 2003,
+    "refugees": 73
+  },
+  {
+    "origin": "Iraq",
+    "year": 2003,
+    "refugees": 22
+  },
+  {
+    "origin": "Israel",
+    "year": 2003,
+    "refugees": 14
+  },
+  {
+    "origin": "Kazakhstan",
+    "year": 2003,
+    "refugees": 5
+  },
+  {
+    "origin": "Liberia",
+    "year": 2003,
+    "refugees": 7
+  },
+  {
+    "origin": "Myanmar",
+    "year": 2003,
+    "refugees": 940
+  },
+  {
+    "origin": "Rwanda",
+    "year": 2003,
+    "refugees": 7
+  },
+  {
+    "origin": "Somalia",
+    "year": 2003,
+    "refugees": 66
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 2003,
+    "refugees": 60922
+  },
+  {
+    "origin": "Sudan",
+    "year": 2003,
+    "refugees": 55
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 2002,
+    "refugees": 11371
+  },
+  {
+    "origin": "China",
+    "year": 2002,
+    "refugees": 92346
+  },
+  {
+    "origin": "Congo, Republic of",
+    "year": 2002,
+    "refugees": 5
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 2002,
+    "refugees": 14
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 2002,
+    "refugees": 87
+  },
+  {
+    "origin": "Iraq",
+    "year": 2002,
+    "refugees": 26
+  },
+  {
+    "origin": "Israel",
+    "year": 2002,
+    "refugees": 16
+  },
+  {
+    "origin": "Liberia",
+    "year": 2002,
+    "refugees": 7
+  },
+  {
+    "origin": "Myanmar",
+    "year": 2002,
+    "refugees": 1043
+  },
+  {
+    "origin": "Russian Federation",
+    "year": 2002,
+    "refugees": 5
+  },
+  {
+    "origin": "Rwanda",
+    "year": 2002,
+    "refugees": 6
+  },
+  {
+    "origin": "Serbia and Kosovo: S/RES/1244 (1999)",
+    "year": 2002,
+    "refugees": 5
+  },
+  {
+    "origin": "Somalia",
+    "year": 2002,
+    "refugees": 68
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 2002,
+    "refugees": 63767
+  },
+  {
+    "origin": "Sudan",
+    "year": 2002,
+    "refugees": 87
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 2001,
+    "refugees": 11972
+  },
+  {
+    "origin": "China",
+    "year": 2001,
+    "refugees": 92344
+  },
+  {
+    "origin": "Cuba",
+    "year": 2001,
+    "refugees": 5
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 2001,
+    "refugees": 10
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 2001,
+    "refugees": 95
+  },
+  {
+    "origin": "Iraq",
+    "year": 2001,
+    "refugees": 24
+  },
+  {
+    "origin": "Israel",
+    "year": 2001,
+    "refugees": 5
+  },
+  {
+    "origin": "Liberia",
+    "year": 2001,
+    "refugees": 5
+  },
+  {
+    "origin": "Myanmar",
+    "year": 2001,
+    "refugees": 876
+  },
+  {
+    "origin": "Russian Federation",
+    "year": 2001,
+    "refugees": 5
+  },
+  {
+    "origin": "Rwanda",
+    "year": 2001,
+    "refugees": 6
+  },
+  {
+    "origin": "Serbia and Kosovo: S/RES/1244 (1999)",
+    "year": 2001,
+    "refugees": 5
+  },
+  {
+    "origin": "Somalia",
+    "year": 2001,
+    "refugees": 68
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 2001,
+    "refugees": 64061
+  },
+  {
+    "origin": "Sudan",
+    "year": 2001,
+    "refugees": 67
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 2000,
+    "refugees": 12760
+  },
+  {
+    "origin": "China",
+    "year": 2000,
+    "refugees": 92343
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 2000,
+    "refugees": 10
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 2000,
+    "refugees": 114
+  },
+  {
+    "origin": "Iraq",
+    "year": 2000,
+    "refugees": 30
+  },
+  {
+    "origin": "Israel",
+    "year": 2000,
+    "refugees": 5
+  },
+  {
+    "origin": "Liberia",
+    "year": 2000,
+    "refugees": 5
+  },
+  {
+    "origin": "Myanmar",
+    "year": 2000,
+    "refugees": 779
+  },
+  {
+    "origin": "Rwanda",
+    "year": 2000,
+    "refugees": 6
+  },
+  {
+    "origin": "Serbia and Kosovo: S/RES/1244 (1999)",
+    "year": 2000,
+    "refugees": 5
+  },
+  {
+    "origin": "Somalia",
+    "year": 2000,
+    "refugees": 84
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 2000,
+    "refugees": 64743
+  },
+  {
+    "origin": "Sudan",
+    "year": 2000,
+    "refugees": 56
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 1999,
+    "refugees": 14473
+  },
+  {
+    "origin": "China",
+    "year": 1999,
+    "refugees": 98001
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 1999,
+    "refugees": 5
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 1999,
+    "refugees": 171
+  },
+  {
+    "origin": "Iraq",
+    "year": 1999,
+    "refugees": 34
+  },
+  {
+    "origin": "Israel",
+    "year": 1999,
+    "refugees": 5
+  },
+  {
+    "origin": "Lao People's Dem. Rep.",
+    "year": 1999,
+    "refugees": 5
+  },
+  {
+    "origin": "Liberia",
+    "year": 1999,
+    "refugees": 5
+  },
+  {
+    "origin": "Myanmar",
+    "year": 1999,
+    "refugees": 696
+  },
+  {
+    "origin": "Serbia and Kosovo: S/RES/1244 (1999)",
+    "year": 1999,
+    "refugees": 8
+  },
+  {
+    "origin": "Somalia",
+    "year": 1999,
+    "refugees": 142
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 1999,
+    "refugees": 66431
+  },
+  {
+    "origin": "Sudan",
+    "year": 1999,
+    "refugees": 55
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 1998,
+    "refugees": 16058
+  },
+  {
+    "origin": "China",
+    "year": 1998,
+    "refugees": 98000
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 1998,
+    "refugees": 5
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 1998,
+    "refugees": 203
+  },
+  {
+    "origin": "Iraq",
+    "year": 1998,
+    "refugees": 44
+  },
+  {
+    "origin": "Israel",
+    "year": 1998,
+    "refugees": 7
+  },
+  {
+    "origin": "Lao People's Dem. Rep.",
+    "year": 1998,
+    "refugees": 5
+  },
+  {
+    "origin": "Liberia",
+    "year": 1998,
+    "refugees": 5
+  },
+  {
+    "origin": "Myanmar",
+    "year": 1998,
+    "refugees": 588
+  },
+  {
+    "origin": "Rwanda",
+    "year": 1998,
+    "refugees": 5
+  },
+  {
+    "origin": "Somalia",
+    "year": 1998,
+    "refugees": 178
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 1998,
+    "refugees": 70337
+  },
+  {
+    "origin": "Sudan",
+    "year": 1998,
+    "refugees": 81
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 1997,
+    "refugees": 17456
+  },
+  {
+    "origin": "Armenia",
+    "year": 1997,
+    "refugees": 5
+  },
+  {
+    "origin": "Bangladesh",
+    "year": 1997,
+    "refugees": 40080
+  },
+  {
+    "origin": "China",
+    "year": 1997,
+    "refugees": 98000
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 1997,
+    "refugees": 6
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 1997,
+    "refugees": 214
+  },
+  {
+    "origin": "Iraq",
+    "year": 1997,
+    "refugees": 45
+  },
+  {
+    "origin": "Israel",
+    "year": 1997,
+    "refugees": 8
+  },
+  {
+    "origin": "Lao People's Dem. Rep.",
+    "year": 1997,
+    "refugees": 5
+  },
+  {
+    "origin": "Liberia",
+    "year": 1997,
+    "refugees": 5
+  },
+  {
+    "origin": "Myanmar",
+    "year": 1997,
+    "refugees": 463
+  },
+  {
+    "origin": "Somalia",
+    "year": 1997,
+    "refugees": 205
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 1997,
+    "refugees": 66498
+  },
+  {
+    "origin": "Sudan",
+    "year": 1997,
+    "refugees": 82
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 1996,
+    "refugees": 18607
+  },
+  {
+    "origin": "Armenia",
+    "year": 1996,
+    "refugees": 5
+  },
+  {
+    "origin": "Bangladesh",
+    "year": 1996,
+    "refugees": 53500
+  },
+  {
+    "origin": "China",
+    "year": 1996,
+    "refugees": 98000
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 1996,
+    "refugees": 5
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 1996,
+    "refugees": 195
+  },
+  {
+    "origin": "Iraq",
+    "year": 1996,
+    "refugees": 39
+  },
+  {
+    "origin": "Israel",
+    "year": 1996,
+    "refugees": 11
+  },
+  {
+    "origin": "Lao People's Dem. Rep.",
+    "year": 1996,
+    "refugees": 5
+  },
+  {
+    "origin": "Liberia",
+    "year": 1996,
+    "refugees": 6
+  },
+  {
+    "origin": "Myanmar",
+    "year": 1996,
+    "refugees": 440
+  },
+  {
+    "origin": "Serbia and Kosovo: S/RES/1244 (1999)",
+    "year": 1996,
+    "refugees": 5
+  },
+  {
+    "origin": "Somalia",
+    "year": 1996,
+    "refugees": 243
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 1996,
+    "refugees": 62226
+  },
+  {
+    "origin": "Sudan",
+    "year": 1996,
+    "refugees": 84
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 1995,
+    "refugees": 19916
+  },
+  {
+    "origin": "Armenia",
+    "year": 1995,
+    "refugees": 5
+  },
+  {
+    "origin": "Bangladesh",
+    "year": 1995,
+    "refugees": 53500
+  },
+  {
+    "origin": "China",
+    "year": 1995,
+    "refugees": 98000
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 1995,
+    "refugees": 13
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 1995,
+    "refugees": 220
+  },
+  {
+    "origin": "Iraq",
+    "year": 1995,
+    "refugees": 36
+  },
+  {
+    "origin": "Israel",
+    "year": 1995,
+    "refugees": 15
+  },
+  {
+    "origin": "Lao People's Dem. Rep.",
+    "year": 1995,
+    "refugees": 5
+  },
+  {
+    "origin": "Liberia",
+    "year": 1995,
+    "refugees": 5
+  },
+  {
+    "origin": "Myanmar",
+    "year": 1995,
+    "refugees": 307
+  },
+  {
+    "origin": "Rwanda",
+    "year": 1995,
+    "refugees": 5
+  },
+  {
+    "origin": "Serbia and Kosovo: S/RES/1244 (1999)",
+    "year": 1995,
+    "refugees": 5
+  },
+  {
+    "origin": "Somalia",
+    "year": 1995,
+    "refugees": 286
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 1995,
+    "refugees": 55062
+  },
+  {
+    "origin": "Sudan",
+    "year": 1995,
+    "refugees": 101
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 1994,
+    "refugees": 22362
+  },
+  {
+    "origin": "Angola",
+    "year": 1994,
+    "refugees": 5
+  },
+  {
+    "origin": "Armenia",
+    "year": 1994,
+    "refugees": 5
+  },
+  {
+    "origin": "Bangladesh",
+    "year": 1994,
+    "refugees": 53465
+  },
+  {
+    "origin": "China",
+    "year": 1994,
+    "refugees": 108001
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 1994,
+    "refugees": 17
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 1994,
+    "refugees": 227
+  },
+  {
+    "origin": "Iraq",
+    "year": 1994,
+    "refugees": 42
+  },
+  {
+    "origin": "Israel",
+    "year": 1994,
+    "refugees": 22
+  },
+  {
+    "origin": "Lao People's Dem. Rep.",
+    "year": 1994,
+    "refugees": 8
+  },
+  {
+    "origin": "Liberia",
+    "year": 1994,
+    "refugees": 5
+  },
+  {
+    "origin": "Myanmar",
+    "year": 1994,
+    "refugees": 245
+  },
+  {
+    "origin": "Rwanda",
+    "year": 1994,
+    "refugees": 9
+  },
+  {
+    "origin": "Serbia and Kosovo: S/RES/1244 (1999)",
+    "year": 1994,
+    "refugees": 5
+  },
+  {
+    "origin": "Somalia",
+    "year": 1994,
+    "refugees": 352
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 1994,
+    "refugees": 73463
+  },
+  {
+    "origin": "Sudan",
+    "year": 1994,
+    "refugees": 109
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 1993,
+    "refugees": 24421
+  },
+  {
+    "origin": "Angola",
+    "year": 1993,
+    "refugees": 5
+  },
+  {
+    "origin": "Armenia",
+    "year": 1993,
+    "refugees": 5
+  },
+  {
+    "origin": "Bangladesh",
+    "year": 1993,
+    "refugees": 56000
+  },
+  {
+    "origin": "China",
+    "year": 1993,
+    "refugees": 108001
+  },
+  {
+    "origin": "Ethiopia",
+    "year": 1993,
+    "refugees": 17
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 1993,
+    "refugees": 244
+  },
+  {
+    "origin": "Iraq",
+    "year": 1993,
+    "refugees": 47
+  },
+  {
+    "origin": "Israel",
+    "year": 1993,
+    "refugees": 27
+  },
+  {
+    "origin": "Lao People's Dem. Rep.",
+    "year": 1993,
+    "refugees": 8
+  },
+  {
+    "origin": "Myanmar",
+    "year": 1993,
+    "refugees": 169
+  },
+  {
+    "origin": "Serbia and Kosovo: S/RES/1244 (1999)",
+    "year": 1993,
+    "refugees": 5
+  },
+  {
+    "origin": "Somalia",
+    "year": 1993,
+    "refugees": 348
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 1993,
+    "refugees": 73463
+  },
+  {
+    "origin": "Sudan",
+    "year": 1993,
+    "refugees": 37
+  },
+  {
+    "origin": "Viet Nam",
+    "year": 1993,
+    "refugees": 5
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 1992,
+    "refugees": 11002
+  },
+  {
+    "origin": "Bangladesh",
+    "year": 1992,
+    "refugees": 53187
+  },
+  {
+    "origin": "China",
+    "year": 1992,
+    "refugees": 80000
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 1992,
+    "refugees": 806
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 1992,
+    "refugees": 113377
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 1991,
+    "refugees": 9766
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 1991,
+    "refugees": 803
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 1991,
+    "refugees": 200000
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 1990,
+    "refugees": 11946
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 1990,
+    "refugees": 605
+  },
+  {
+    "origin": "Sri Lanka",
+    "year": 1990,
+    "refugees": 200000
+  },
+  {
+    "origin": "Unknown/other",
+    "year": 1990,
+    "refugees": 192
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 1989,
+    "refugees": 8451
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 1989,
+    "refugees": 982
+  },
+  {
+    "origin": "Unknown/other",
+    "year": 1989,
+    "refugees": 116
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 1988,
+    "refugees": 4891
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 1988,
+    "refugees": 1660
+  },
+  {
+    "origin": "Unknown/other",
+    "year": 1988,
+    "refugees": 94
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 1987,
+    "refugees": 5180
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 1987,
+    "refugees": 1440
+  },
+  {
+    "origin": "Unknown/other",
+    "year": 1987,
+    "refugees": 100
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 1986,
+    "refugees": 5530
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 1986,
+    "refugees": 820
+  },
+  {
+    "origin": "Unknown/other",
+    "year": 1986,
+    "refugees": 90
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 1985,
+    "refugees": 5690
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 1985,
+    "refugees": 940
+  },
+  {
+    "origin": "Unknown/other",
+    "year": 1985,
+    "refugees": 90
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 1984,
+    "refugees": 5850
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 1984,
+    "refugees": 1250
+  },
+  {
+    "origin": "Unknown/other",
+    "year": 1984,
+    "refugees": 100
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 1983,
+    "refugees": 5300
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 1983,
+    "refugees": 1560
+  },
+  {
+    "origin": "Unknown/other",
+    "year": 1983,
+    "refugees": 70
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 1982,
+    "refugees": 3430
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 1982,
+    "refugees": 1480
+  },
+  {
+    "origin": "Unknown/other",
+    "year": 1982,
+    "refugees": 100
+  },
+  {
+    "origin": "Afghanistan",
+    "year": 1981,
+    "refugees": 2690
+  },
+  {
+    "origin": "Iran (Islamic Rep. of)",
+    "year": 1981,
+    "refugees": 720
+  },
+  {
+    "origin": "Unknown/other",
+    "year": 1981,
+    "refugees": 100
+  }
+]

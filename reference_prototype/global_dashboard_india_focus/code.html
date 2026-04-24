@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#f8f9ff",
+                        "secondary-fixed": "#89f5e7",
+                        "on-secondary-fixed": "#00201d",
+                        "primary-fixed": "#dde1ff",
+                        "tertiary-fixed": "#ffdcc3",
+                        "inverse-on-surface": "#eaf1ff",
+                        "surface-container": "#e6eeff",
+                        "tertiary-container": "#743d00",
+                        "on-secondary-container": "#006f66",
+                        "on-error-container": "#93000a",
+                        "on-background": "#0d1c2e",
+                        "on-secondary-fixed-variant": "#005049",
+                        "primary": "#00288e",
+                        "on-primary-container": "#a8b8ff",
+                        "secondary": "#006a61",
+                        "surface-bright": "#f8f9ff",
+                        "surface-container-high": "#dce9ff",
+                        "secondary-fixed-dim": "#6bd8cb",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb77d",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#d5e3fc",
+                        "tertiary": "#532a00",
+                        "surface-tint": "#3755c3",
+                        "primary-container": "#1e40af",
+                        "on-tertiary-fixed": "#2f1500",
+                        "on-tertiary-fixed-variant": "#6e3900",
+                        "surface-variant": "#d5e3fc",
+                        "secondary-container": "#86f2e4",
+                        "surface-dim": "#ccdbf3",
+                        "surface-container-low": "#eff4ff",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#c4c5d5",
+                        "outline": "#757684",
+                        "surface": "#f8f9ff",
+                        "on-primary-fixed-variant": "#173bab",
+                        "on-surface": "#0d1c2e",
+                        "inverse-primary": "#b8c4ff",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#ffa85d",
+                        "primary-fixed-dim": "#b8c4ff",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#233144",
+                        "on-primary-fixed": "#001453",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#444653"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Public Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 24px 32px -8px rgba(13, 28, 46, 0.06);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f8f9ff] dark:bg-[#0d1c2e] shadow-sm dark:shadow-none font-['Public_Sans'] font-bold tracking-tight text-sm uppercase flex justify-between items-center px-8 h-20 bg-opacity-90 backdrop-blur-md">
+<div class="flex items-center gap-8">
+<div class="text-xl font-black tracking-tighter text-[#0d1c2e] dark:text-white flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">public</span>
+                Ethical Observer
+            </div>
+<!-- Search Bar on Left -->
+<div class="hidden md:flex items-center bg-surface-container-low rounded-full px-4 py-2 w-64 border border-transparent focus-within:border-primary-fixed-dim transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant text-sm mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm font-body font-normal text-on-surface w-full placeholder-outline" placeholder="Search India index..." type="text"/>
+</div>
+</div>
+<ul class="hidden lg:flex items-center gap-8 h-full">
+<li class="h-full flex items-center pt-2">
+<a class="text-[#1e40af] dark:text-[#3b82f6] border-b-2 border-[#1e40af] pb-2 h-full flex items-center hover:text-[#1e40af] dark:hover:text-[#3b82f6] transition-all duration-300" href="#">Dashboard</a>
+</li>
+<li class="h-full flex items-center pt-2">
+<a class="text-[#64748b] dark:text-[#94a3b8] font-medium h-full flex items-center hover:text-[#1e40af] dark:hover:text-[#3b82f6] transition-all duration-300" href="#">Predictions</a>
+</li>
+<li class="h-full flex items-center pt-2">
+<a class="text-[#64748b] dark:text-[#94a3b8] font-medium h-full flex items-center hover:text-[#1e40af] dark:hover:text-[#3b82f6] transition-all duration-300" href="#">Resource Plan</a>
+</li>
+<li class="h-full flex items-center pt-2">
+<a class="text-[#64748b] dark:text-[#94a3b8] font-medium h-full flex items-center hover:text-[#1e40af] dark:hover:text-[#3b82f6] transition-all duration-300" href="#">Analysis</a>
+</li>
+</ul>
+<div class="flex items-center gap-4">
+<button class="scale-95 active:scale-90 transition-transform text-[#64748b] hover:text-[#1e40af] p-2 rounded-full hover:bg-surface-container-high relative group">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="scale-95 active:scale-90 transition-transform text-[#64748b] hover:text-[#1e40af] p-2 rounded-full hover:bg-surface-container-high">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-surface-dim overflow-hidden ring-2 ring-primary/10 ml-2">
+<img alt="User Analyst Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9AilOT9Ft5uMDQMJy0438jwo5EiH21qB437VBRenmzbFeYOX2Rd3pISL7pL9dd2Fyxc7j0LTIWAra8IVc-wgKSf86kyBNcL7M6aiqOFNGk3NQyKHPPyVkwP_5cJBALWhTUj2OJOVFNgHY-hzYVmntpDvcz6Oq8TIz7qKx3_WmnL_KvrdL6gcks28ENt5oJiG67SswWYj0Kw0FCxrKKenOtm7x40X_Wrtk27gVEDwVQTXZY82SHB4G6aRPwhX2nsluc4iAWugnn4He"/>
+</div>
+</div>
+<div class="bg-[#eff4ff] dark:bg-[#1a2b3c] h-px w-full absolute bottom-0 left-0"></div>
+</nav>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-72 z-40 bg-[#eff4ff] dark:bg-[#0d1c2e] flex flex-col gap-2 p-6 border-r-0 pt-28 font-['Inter'] text-[13px] font-semibold">
+<div class="mb-8 px-2">
+<h2 class="text-xs font-bold uppercase tracking-wider text-[#006a61] mb-1">Predictive Engine</h2>
+<p class="text-xs text-[#475569] font-normal">V.2.4 Alpha</p>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<a class="bg-white dark:bg-[#1e40af]/20 text-[#1e40af] dark:text-white rounded-lg shadow-sm px-4 py-3 flex items-center gap-3 hover:bg-[#ffffff80] dark:hover:bg-[#ffffff10] transition-colors ease-out duration-200" href="#">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">public</span>
+                India Overview
+            </a>
+<a class="text-[#475569] dark:text-[#94a3b8] px-4 py-3 flex items-center gap-3 rounded-lg hover:bg-[#ffffff80] dark:hover:bg-[#ffffff10] transition-colors ease-out duration-200" href="#">
+<span class="material-symbols-outlined text-lg">trending_up</span>
+                Migration Trends
+            </a>
+<a class="text-[#475569] dark:text-[#94a3b8] px-4 py-3 flex items-center gap-3 rounded-lg hover:bg-[#ffffff80] dark:hover:bg-[#ffffff10] transition-colors ease-out duration-200" href="#">
+<span class="material-symbols-outlined text-lg">warning</span>
+                Risk Assessment
+            </a>
+<a class="text-[#475569] dark:text-[#94a3b8] px-4 py-3 flex items-center gap-3 rounded-lg hover:bg-[#ffffff80] dark:hover:bg-[#ffffff10] transition-colors ease-out duration-200" href="#">
+<span class="material-symbols-outlined text-lg">timeline</span>
+                Scenario Modeler
+            </a>
+<a class="text-[#475569] dark:text-[#94a3b8] px-4 py-3 flex items-center gap-3 rounded-lg hover:bg-[#ffffff80] dark:hover:bg-[#ffffff10] transition-colors ease-out duration-200" href="#">
+<span class="material-symbols-outlined text-lg">inventory_2</span>
+                Archive
+            </a>
+</nav>
+<div class="mt-auto flex flex-col gap-4">
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-white py-3 px-4 rounded-lg flex items-center justify-center gap-2 shadow-md scale-95 active:scale-90 transition-transform">
+                Generate Report
+            </button>
+<div class="flex flex-col gap-1 pt-4 border-t border-outline-variant/15">
+<a class="text-[#475569] dark:text-[#94a3b8] px-4 py-2 flex items-center gap-3 rounded-lg hover:bg-[#ffffff80] dark:hover:bg-[#ffffff10] transition-colors ease-out duration-200" href="#">
+<span class="material-symbols-outlined text-[16px]">help</span>
+                    Help Center
+                </a>
+<a class="text-[#475569] dark:text-[#94a3b8] px-4 py-2 flex items-center gap-3 rounded-lg hover:bg-[#ffffff80] dark:hover:bg-[#ffffff10] transition-colors ease-out duration-200" href="#">
+<span class="material-symbols-outlined text-[16px]">security</span>
+                    Privacy
+                </a>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-72 pt-20 min-h-screen flex flex-col">
+<!-- Dashboard Body -->
+<div class="p-12 space-y-8 max-w-[1600px] mx-auto w-full">
+<!-- Header Section -->
+<div class="flex justify-between items-end">
+<div>
+<h1 class="font-headline text-4xl font-black text-on-background tracking-tight">India Displacement Monitor</h1>
+<p class="text-on-surface-variant mt-2 font-medium">Real-time predictive analysis of humanitarian movement and risk density in the Indian subcontinent.</p>
+</div>
+<div class="flex gap-3">
+<span class="px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold flex items-center gap-2">
+<span class="w-2 h-2 bg-secondary rounded-full"></span> Live Updates Active
+                    </span>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Main Visual: Interactive World Map -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container-lowest rounded-xl overflow-hidden editorial-shadow relative min-h-[600px] flex flex-col">
+<div class="p-6 border-b border-outline-variant/10 flex justify-between items-center glass-panel sticky top-0 z-10">
+<h3 class="font-headline font-bold text-on-surface">Historical Movement Heatmap</h3>
+<div class="flex gap-2">
+<button class="px-3 py-1 text-xs font-bold rounded bg-surface-container text-primary">All Flow</button>
+<button class="px-3 py-1 text-xs font-bold rounded text-on-surface-variant hover:bg-surface-container">Hot Spots</button>
+</div>
+</div>
+<div class="flex-1 bg-surface-dim relative overflow-hidden">
+<img class="w-full h-full object-cover opacity-80 mix-blend-multiply" data-alt="top-down high contrast map showing glowing blue migration routes and orange heat signatures for border regions in India" data-location="India" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-ZfdqMRqYsx-IMSqMQqgqoUQSJ5vzEDal7EVZdwz4HyG_g-c4mAtPGcAkQJ-j5hW5kWrmJ_p4R8TWDblTa7gzQjkhxOIZguckddfto3uI5dCYNv9c8EN66c7PiS26jd4zPA1d6AxG00_WAyE53CXVtfmwqifE4vWNPKnS9kdJ05Ab1Yo39OhurBoR4FXstBEu4U2rq2eOCkBm9szEcZxpav_O-Cc-7OEPk9a4okr9_ICpRY69f6yRe4jyeRC0iOuc-nBl6ttjKSLO"/>
+<!-- Map Overlay Information -->
+<div class="absolute bottom-6 left-6 flex gap-4">
+<div class="glass-panel p-4 rounded-xl border border-white/20 shadow-xl">
+<p class="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">Active Border Zone</p>
+<p class="font-headline font-black text-xl text-primary">Assam, India</p>
+<div class="mt-2 flex items-center gap-2 text-xs font-medium text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+                                    +12.4% Predicted Movement
+                                </div>
+</div>
+</div>
+<!-- Data Legend -->
+<div class="absolute top-6 right-6 space-y-2">
+<div class="glass-panel py-2 px-4 rounded-full flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-primary shadow-[0_0_8px_rgba(0,40,142,0.5)]"></span>
+<span class="text-[10px] font-bold uppercase">Safe Corridor</span>
+</div>
+<div class="glass-panel py-2 px-4 rounded-full flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim shadow-[0_0_8px_rgba(255,183,125,0.5)]"></span>
+<span class="text-[10px] font-bold uppercase">Emerging Risk</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Metrics Side Panel -->
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-6">
+<!-- Metric Card 1: Data Narrative -->
+<div class="flex bg-surface-container-lowest rounded-xl overflow-hidden editorial-shadow h-36">
+<div class="w-1/3 bg-primary-container flex flex-col justify-center items-center text-on-primary-container p-4">
+<span class="material-symbols-outlined text-3xl mb-2" data-icon="groups" data-weight="fill" style="font-variation-settings: 'FILL' 1;">groups</span>
+<span class="text-xs font-bold uppercase tracking-widest text-center leading-tight">Total Displaced</span>
+</div>
+<div class="w-2/3 p-6 flex flex-col justify-center">
+<h4 class="font-headline font-black text-3xl text-on-background">5.4M</h4>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-xs font-bold text-error">+4.2%</span>
+<span class="text-xs text-on-surface-variant">vs. previous quarter</span>
+</div>
+</div>
+</div>
+<!-- Metric Card 2 -->
+<div class="flex bg-surface-container-lowest rounded-xl overflow-hidden editorial-shadow h-36">
+<div class="w-1/3 bg-tertiary-container flex flex-col justify-center items-center text-on-tertiary-container p-4">
+<span class="material-symbols-outlined text-3xl mb-2" data-icon="crisis_alert" data-weight="fill" style="font-variation-settings: 'FILL' 1;">crisis_alert</span>
+<span class="text-xs font-bold uppercase tracking-widest text-center leading-tight">Active Zones</span>
+</div>
+<div class="w-2/3 p-6 flex flex-col justify-center">
+<h4 class="font-headline font-black text-3xl text-on-background">12</h4>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-xs font-bold text-secondary-fixed-dim">Stable</span>
+<span class="text-xs text-on-surface-variant">Last 72 hours</span>
+</div>
+</div>
+</div>
+<!-- Chart Card: Migration Growth -->
+<div class="bg-surface-container-lowest rounded-xl p-6 editorial-shadow flex-1">
+<div class="flex justify-between items-center mb-6">
+<div>
+<h4 class="font-headline font-bold text-on-surface">12-Month Growth</h4>
+<p class="text-xs text-on-surface-variant">Cross-border movement patterns</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="more_vert">more_vert</span>
+</div>
+<div class="h-48 w-full flex items-end justify-between gap-1 mt-4">
+<div class="w-full bg-surface-container-high rounded-t-sm" style="height: 40%;"></div>
+<div class="w-full bg-surface-container-high rounded-t-sm" style="height: 55%;"></div>
+<div class="w-full bg-surface-container-high rounded-t-sm" style="height: 45%;"></div>
+<div class="w-full bg-surface-container-high rounded-t-sm" style="height: 70%;"></div>
+<div class="w-full bg-surface-container-high rounded-t-sm" style="height: 60%;"></div>
+<div class="w-full bg-primary rounded-t-sm shadow-[0_0_12px_rgba(0,40,142,0.3)]" style="height: 85%;"></div>
+<div class="w-full bg-surface-container-high rounded-t-sm" style="height: 75%;"></div>
+<div class="w-full bg-surface-container-high rounded-t-sm" style="height: 90%;"></div>
+<div class="w-full bg-surface-container-high rounded-t-sm" style="height: 65%;"></div>
+<div class="w-full bg-surface-container-high rounded-t-sm" style="height: 80%;"></div>
+<div class="w-full bg-surface-container-high rounded-t-sm" style="height: 70%;"></div>
+<div class="w-full bg-secondary rounded-t-sm" style="height: 95%;"></div>
+</div>
+<div class="flex justify-between mt-4 text-[10px] font-bold uppercase text-on-surface-variant tracking-wider">
+<span>JAN</span>
+<span>JUN</span>
+<span>DEC</span>
+</div>
+</div>
+</div>
+<!-- Bottom Row: Trend Indicators & Data Feed -->
+<div class="col-span-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Trend Detail 1 -->
+<div class="bg-surface-container-low rounded-xl p-6 border-l-4 border-secondary shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<div class="p-2 bg-secondary/10 rounded-lg">
+<span class="material-symbols-outlined text-secondary" data-icon="psychology">psychology</span>
+</div>
+<h5 class="font-headline font-bold text-sm">Sentiment Analysis</h5>
+</div>
+<p class="text-xs text-on-surface-variant mb-4 leading-relaxed">Media sentiment indicates a 15% increase in cross-border empathy metrics in West Bengal over last week.</p>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[65%]"></div>
+</div>
+</div>
+<!-- Trend Detail 2 -->
+<div class="bg-surface-container-low rounded-xl p-6 border-l-4 border-primary shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<div class="p-2 bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined text-primary" data-icon="water_drop">water_drop</span>
+</div>
+<h5 class="font-headline font-bold text-sm">Climate Push Factors</h5>
+</div>
+<p class="text-xs text-on-surface-variant mb-4 leading-relaxed">Cyclone intensity in the Bay of Bengal is now a primary driver for 40% of newly registered movements in Tamil Nadu.</p>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[42%]"></div>
+</div>
+</div>
+<!-- Trend Detail 3 -->
+<div class="bg-surface-container-low rounded-xl p-6 border-l-4 border-on-tertiary-fixed-variant shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<div class="p-2 bg-tertiary-fixed/30 rounded-lg">
+<span class="material-symbols-outlined text-on-tertiary-fixed-variant" data-icon="policy">policy</span>
+</div>
+<h5 class="font-headline font-bold text-sm">Policy Shift Alert</h5>
+</div>
+<p class="text-xs text-on-surface-variant mb-4 leading-relaxed">Neighboring districts have updated border protocols, potentially restricting existing corridor flow into Mizoram by 22%.</p>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full w-[88%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full py-8 mt-auto flex flex-col md:flex-row justify-between items-center px-12 border-t border-surface-container-low bg-surface-bright">
+<div class="mb-4 md:mb-0">
+<p class="font-body text-xs text-on-surface-variant">© 2024 Refugee Movement Prediction System. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-body text-xs text-on-surface-variant hover:text-primary transition-opacity" href="#">Methodology</a>
+<a class="font-body text-xs text-on-surface-variant hover:text-primary transition-opacity" href="#">Ethics Framework</a>
+<a class="font-body text-xs text-on-surface-variant hover:text-primary transition-opacity" href="#">Data Sources</a>
+<a class="font-body text-xs text-on-surface-variant hover:text-primary transition-opacity" href="#">Contact</a>
+</div>
+</footer>
+</main>
+</body></html>

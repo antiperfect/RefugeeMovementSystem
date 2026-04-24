@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/unhcr/(.*)",
+      "destination": "https://api.unhcr.org/population/v1/$1"
+    }
+  ]
+}

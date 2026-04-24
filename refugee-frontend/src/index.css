@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-body selection:bg-secondary-fixed;
+  }
+  .dark body {
+    background: #0a0f1a;
+    color: #e2e8f0;
+  }
+}
+
+@layer utilities {
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .editorial-shadow {
+    box-shadow: 0 24px 32px -8px rgba(13, 28, 46, 0.06);
+  }
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+  }
+  .dark .glass-panel {
+    background: rgba(10, 15, 26, 0.7);
+  }
+  .dot-matrix-base {
+    background-image: radial-gradient(#d0d5dd 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+  }
+  .dark .dot-matrix-base {
+    background-image: radial-gradient(rgba(255,255,255,0.12) 1.5px, transparent 1.5px);
+  }
+  .dot-matrix-spotlight {
+    background-image: radial-gradient(#94a3b8 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+  }
+  .dark .dot-matrix-spotlight {
+    background-image: radial-gradient(rgba(255,255,255,0.35) 1.5px, transparent 1.5px);
+  }
+  .dark .editorial-shadow {
+    box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.3);
+  }
+  .bento-card {
+    @apply bg-surface-container-lowest/80 backdrop-blur-md border border-white/40 shadow-sm;
+  }
+  .dark .bento-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@media (pointer: fine) {
+  html, body, * {
+    cursor: none !important;
+  }
+}
+
+.leaflet-container {
+    height: 100%;
+    width: 100%;
+}
+
+/* Smooth fade-in animation */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.4s ease-out;
+}
+
+/* Gradient text animation */
+@keyframes gradient-pan {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+.bg-gradient-pan {
+  animation: gradient-pan 4s linear infinite;
+}
