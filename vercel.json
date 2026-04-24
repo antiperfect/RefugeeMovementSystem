@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "rewrites": [
     {
       "source": "/api/flask/(.*)",
@@ -18,7 +19,7 @@
     },
     {
       "source": "/((?!api/).*)",
-      "destination": "/refugee-frontend/$1"
+      "destination": "/$1"
     }
   ]
 }
