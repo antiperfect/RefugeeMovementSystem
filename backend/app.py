@@ -66,7 +66,11 @@ def predict_for_country(country, year):
 
 @app.route('/')
 def home():
-    return render_template('index.html', countries=list(mapping.keys()))
+    return jsonify({
+        "status": "online",
+        "message": "Refugee Movement Prediction API is running",
+        "version": "1.0.0"
+    })
 
 @app.route('/predict', methods=['POST'])
 def predict():
