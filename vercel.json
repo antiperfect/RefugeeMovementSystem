@@ -1,14 +1,9 @@
 {
   "version": 2,
-  "functions": {
-    "api/index.py": {
-      "excludeFiles": "{refugee-frontend/**,externaldatabase/**,reference_prototype/**,node_modules/**}"
-    }
-  },
   "rewrites": [
     {
       "source": "/api/flask/(.*)",
-      "destination": "/api/index.py"
+      "destination": "/backend/index.py"
     },
     {
       "source": "/api/unhcr/(.*)",
