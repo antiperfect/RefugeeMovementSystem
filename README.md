@@ -35,24 +35,6 @@ An advanced, full-stack machine learning dashboard designed to predict and visua
 
 ---
 
-## 📂 Project Structure
-
-```text
-v1/
-├── backend/                    # Flask ML prediction server
-│   ├── app.py                  # Main API server
-│   ├── time_model.pkl          # Refugee count prediction model
-│   ├── resource_model.pkl      # Resource needs prediction model
-│   └── requirements.txt        # Python dependencies
-├── refugee-frontend/           # React + Vite dashboard
-│   ├── src/                    # Components, Pages, and Data
-│   └── package.json            # Node.js dependencies
-├── start.ps1                   # Unified launch script
-└── requirements.txt            # Root-level Python dependencies
-```
-
----
-
 ## ⚙️ Installation & Setup
 
 ### 1. Prerequisites
@@ -115,9 +97,9 @@ The dashboard will be available at **[http://localhost:5173](http://localhost:51
 | Member | Role |
 | :--- | :--- |
 | **Shashank Pradhan** | Frontend and Full-Stack Integration |
-| **Kiran Vishwakarma** | ML Training |
+| **Kiran Vishwakarma** | Backend and ML Training |
 | **Jasleen Kaur** | Documentation and Research Paper |
-| **Rani Pari Gupta** | Documentation and Research Paper |
+| **Rani Pari Gupta** | Research Paper |
 
 ---
 
