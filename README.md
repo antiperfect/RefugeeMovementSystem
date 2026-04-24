@@ -1,116 +1,125 @@
-# Refugee Movement Prediction System — Prototype v1
+# 🌍 Refugee Movement Prediction System
 
-A full-stack ML-powered dashboard for predicting and visualizing refugee displacement into India from neighboring countries.
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![ML](https://img.shields.io/badge/Machine%20Learning-FF6F00?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 
-## Project Structure
+An advanced, full-stack machine learning dashboard designed to predict and visualize refugee displacement patterns. This system focuses on movement into India from neighboring regions, providing data-driven insights for humanitarian resource planning.
 
-```
+---
+
+## 🚀 Core Features
+
+- **🔮 Displacement Prediction:** Predicts refugee counts up to 2026 using Random Forest regression models.
+- **📦 Resource Planning:** Automatically calculates essential needs (Food, Shelter, Medical, Water) based on predicted arrivals.
+- **📊 Real-time Analysis:** Interactive charts showing Year-over-Year totals and country-specific trends.
+- **📰 Humanitarian Feed:** Live news integration from GDELT and UN News RSS for situational awareness.
+- **🗺️ Geospatial Visualization:** Interactive map showing origin countries and displacement scales.
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **Framework:** React 19 + Vite
+- **Styling:** Vanilla CSS / Modern UI components
+- **Charts:** Recharts
+- **Maps:** Leaflet & SVG Outlines
+
+### Backend
+- **Server:** Flask (Python)
+- **Data Handling:** Pandas, NumPy
+- **ML Models:** Scikit-learn (Random Forest)
+- **Serialization:** Joblib
+
+---
+
+## 📂 Project Structure
+
+```text
 v1/
 ├── backend/                    # Flask ML prediction server
-│   ├── app.py                  # API server (endpoints: /api/predict, /api/predict-all, /api/news)
-│   ├── time_model.pkl          # Random Forest model — refugee count prediction
-│   ├── resource_model.pkl      # Random Forest model — resource needs (food, shelter, medical, water)
-│   ├── encoder.pkl             # Label encoder for country mapping
-│   ├── origin_mapping.json     # Country name → encoded value mapping
+│   ├── app.py                  # Main API server
+│   ├── time_model.pkl          # Refugee count prediction model
+│   ├── resource_model.pkl      # Resource needs prediction model
 │   └── requirements.txt        # Python dependencies
-│
 ├── refugee-frontend/           # React + Vite dashboard
-│   ├── src/
-│   │   ├── pages/              # Dashboard, Predictions, ResourcePlan, Analysis
-│   │   ├── components/         # TopNavBar, Sidebar, etc.
-│   │   └── data/               # undata.json (UNHCR historical), countryOutlines.ts
-│   ├── vite.config.ts          # Dev proxy to Flask backend
-│   └── package.json
-│
-├── externaldatabase/           # Raw UN data export (XML)
-├── start.ps1                   # Launch both servers with one command
-└── .gitignore
+│   ├── src/                    # Components, Pages, and Data
+│   └── package.json            # Node.js dependencies
+├── start.ps1                   # Unified launch script
+└── requirements.txt            # Root-level Python dependencies
 ```
 
-## Quick Start
+---
 
-### Prerequisites
-- **Python 3.10+** with pip
-- **Node.js 18+** with npm
+## ⚙️ Installation & Setup
 
-### 1. Install dependencies
+### 1. Prerequisites
+- **Python 3.10+**
+- **Node.js 18+**
 
+### 2. Clone and Navigate
 ```bash
-# Backend
+git clone <repository-url>
+cd v1
+```
+
+### 3. Install Dependencies
+
+**Backend:**
+```bash
+# Recommended: use a virtual environment
 cd backend
 pip install -r requirements.txt
-
-# Frontend
-cd ../refugee-frontend
-npm install
+cd ..
 ```
 
-### 2. Launch (one command)
+**Frontend:**
+```bash
+cd refugee-frontend
+npm install
+cd ..
+```
 
+---
+
+## 🏃 Running the Application
+
+### Option A: Unified Launch (Windows)
+Run the PowerShell script to start both servers simultaneously:
 ```powershell
 .\start.ps1
 ```
 
-Or manually in two terminals:
+### Option B: Manual Launch
 
+**Terminal 1 (Backend):**
 ```bash
-# Terminal 1 — Backend
-cd backend && python app.py
-
-# Terminal 2 — Frontend
-cd refugee-frontend && npm run dev
+cd backend
+python app.py
 ```
 
-### 3. Open
-- **Dashboard:** http://localhost:5173
-- **API:** http://localhost:5000/api/predict-all?year=2026
-
-## API Endpoints
-
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/predict?country=Afghanistan&year=2026` | GET | Single country prediction |
-| `/api/predict-all?year=2026` | GET | All countries, sorted by refugee count |
-| `/api/countries` | GET | List of available countries |
-| `/api/news` | GET | Live humanitarian news (GDELT + UN News RSS) |
-
-## Data Sources
-- **UNHCR Population Statistics** (1981–2026) — historical refugee data
-- **Random Forest ML Models** — trained on 65 origin countries
-- **GDELT / UN News RSS** — live humanitarian news feed
-
-## Tech Stack
-- **Frontend:** React 19, TypeScript, Vite, Recharts, Leaflet
-- **Backend:** Flask, scikit-learn, pandas, joblib
-- **ML Models:** Random Forest (time-series + multi-output resource prediction)
-
-## Team
-- **Kiran** — ML model development & training
-
-## Deployment to Vercel
-
-This project is configured to be deployed as a single project on Vercel.
-
-### 1. Push to GitHub
-Initialize a git repository and push your code to GitHub:
+**Terminal 2 (Frontend):**
 ```bash
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin <your-repo-url>
-git push -u origin main
+cd refugee-frontend
+npm run dev
 ```
 
-### 2. Connect to Vercel
-1. Go to the [Vercel Dashboard](https://vercel.com/dashboard).
-2. Click **Add New** > **Project**.
-3. Import your GitHub repository.
-4. Vercel will automatically detect the settings from `vercel.json`:
-   - **Framework Preset:** Vite
-   - **Root Directory:** `./`
-5. Click **Deploy**.
+The dashboard will be available at **[http://localhost:5173](http://localhost:5173)**.
 
-### 3. Verify
-Once deployed, your frontend and Python backend will be running at the same Vercel URL.
-- **Frontend:** `https://your-project.vercel.app`
-- **Backend API:** `https://your-project.vercel.app/api/flask/api/predict-all?year=2026`
+---
+
+## 👥 Team Members
+
+| Member | Role |
+| :--- | :--- |
+| **Shashank Pradhan** | Frontend and Full-Stack Integration |
+| **Kiran Vishwakarma** | ML Training |
+| **Jasleen Kaur** | Documentation and Research Paper |
+| **Rani Pari Gupta** | Documentation and Research Paper |
+
+---
+
+## 📄 License
+*This project is for humanitarian research and academic purposes.*
