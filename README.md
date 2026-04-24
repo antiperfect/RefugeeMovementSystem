@@ -1,11 +1,10 @@
 # 🌍 Refugee Movement Prediction System
 
-[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
-[![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
-[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![ML](https://img.shields.io/badge/Machine%20Learning-FF6F00?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+![License](https://img.shields.io/badge/license-MIT-blue.svg) ![React](https://img.shields.io/badge/react-v19.0.0-blue) ![Python](https://img.shields.io/badge/python-v3.10-yellow) ![Machine Learning](https://img.shields.io/badge/scikit--learn-orange) ![Flask](https://img.shields.io/badge/flask-%23000.svg?logo=flask&logoColor=white)
 
 An advanced, full-stack machine learning dashboard designed to predict and visualize refugee displacement patterns. This system focuses on movement into India from neighboring regions, providing data-driven insights for humanitarian resource planning.
+
+**[Try the Live Webapp](https://refugeemovementsystem-rana.onrender.com)**
 
 ---
 
@@ -97,7 +96,7 @@ The dashboard will be available at **[http://localhost:5173](http://localhost:51
 | Member | Role |
 | :--- | :--- |
 | **Shashank Pradhan** | Frontend and Full-Stack Integration |
-| **Kiran Vishwakarma** | Backend and ML Training |
+| **Kiran Vishwakarma** | Backend Architecture and ML Training |
 | **Jasleen Kaur** | Documentation and Research Paper |
 | **Rani Pari Gupta** | Research Paper |
 
