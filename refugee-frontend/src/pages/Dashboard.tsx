@@ -50,11 +50,6 @@ const Dashboard = () => {
     return validData.filter((d: RefugeeData) => d.year === latestYear);
   }, []);
 
-  const latestYear = useMemo(() => {
-    const validData = unData as RefugeeData[];
-    if (validData.length === 0) return 0;
-    return Math.max(...validData.map((d: RefugeeData) => d.year));
-  }, []);
 
   // Total from historical UN data
   const totalFromData = useMemo(() => {

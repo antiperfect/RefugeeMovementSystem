@@ -143,7 +143,7 @@ const Analysis = () => {
             <div className="bg-surface-container-lowest dark:bg-[#111827] p-6 md:w-2/3 flex flex-col">
               <h3 className="font-headline text-lg font-bold text-on-surface dark:text-white mb-4">Year-over-Year Totals</h3>
               <div className="h-[200px] w-full flex items-end gap-1 px-1">
-                {growthAnalysis.yearTotals.map((yt, i) => {
+                {growthAnalysis.yearTotals.map((yt) => {
                   const max = Math.max(...growthAnalysis.yearTotals.map(y => y.total), 1);
                   const pct = (yt.total / max) * 100;
                   return (

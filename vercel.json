@@ -1,0 +1,36 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "refugee-frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/flask/(.*)",
+      "destination": "api/index.py"
+    },
+    {
+      "source": "/api/unhcr/(.*)",
+      "destination": "https://api.unhcr.org/population/v1/$1"
+    },
+    {
+      "source": "/api/gdelt/(.*)",
+      "destination": "https://api.gdeltproject.org/$1"
+    },
+    {
+      "source": "/api/reliefweb/(.*)",
+      "destination": "https://api.reliefweb.int/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/refugee-frontend/$1"
+    }
+  ]
+}

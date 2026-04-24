@@ -86,4 +86,31 @@ cd refugee-frontend && npm run dev
 
 ## Team
 - **Kiran** — ML model development & training
-- **Shashank** — Full-stack integration & dashboard UI
+
+## Deployment to Vercel
+
+This project is configured to be deployed as a single project on Vercel.
+
+### 1. Push to GitHub
+Initialize a git repository and push your code to GitHub:
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin <your-repo-url>
+git push -u origin main
+```
+
+### 2. Connect to Vercel
+1. Go to the [Vercel Dashboard](https://vercel.com/dashboard).
+2. Click **Add New** > **Project**.
+3. Import your GitHub repository.
+4. Vercel will automatically detect the settings from `vercel.json`:
+   - **Framework Preset:** Vite
+   - **Root Directory:** `./`
+5. Click **Deploy**.
+
+### 3. Verify
+Once deployed, your frontend and Python backend will be running at the same Vercel URL.
+- **Frontend:** `https://your-project.vercel.app`
+- **Backend API:** `https://your-project.vercel.app/api/flask/api/predict-all?year=2026`
