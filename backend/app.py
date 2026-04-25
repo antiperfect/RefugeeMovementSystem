@@ -19,6 +19,11 @@ resource_model = joblib.load(os.path.join(BASE_DIR, 'resource_model.pkl'))
 with open(os.path.join(BASE_DIR, 'origin_mapping.json')) as f:
     mapping = json.load(f)
 
+# Load historical data for lags
+DATA_PATH = os.path.join(BASE_DIR, 'data', 'persons_of_concern.csv')
+historical_df = pd.read_csv(DATA_PATH)
+historical_df['Total_Refugees'] = historical_df['Refugees'] + historical_df['Asylum-seekers']
+
 # India's neighboring / nearby countries (subset for highlight)
 NEIGHBORS = [
     'Afghanistan', 'Bangladesh', 'China', 'Myanmar',
@@ -32,15 +37,47 @@ def predict_for_country(country, year):
 
     origin_encoded = mapping[country]
 
-    # Time model → predicted refugee count
-    future_df = pd.DataFrame({
-        'Year': [year],
-        'Origin_Encoded': [origin_encoded]
-    })
-    refugees = int(time_model.predict(future_df)[0])
-    refugees = max(0, refugees)
+    # Filter historical data for this country
+    country_df = historical_df[historical_df['Country of Origin'] == country].sort_values('Year')
+    
+    if country_df.empty:
+        return None
 
-    # Resource model → food, shelter, medical, water
+    # ---------------- TIME MODEL (Iterative Lags) ----------------
+    # If year is in the past or present data
+    if year <= country_df.iloc[-1]['Year']:
+        row = country_df[country_df['Year'] == year]
+        if not row.empty:
+            refugees = int(row['Total_Refugees'].values[0])
+        else:
+            # Default to last known value if specific year missing from history
+            refugees = int(country_df.iloc[-1]['Total_Refugees'])
+    
+    # If year is in the future
+    else:
+        lag_1 = country_df.iloc[-1]['Total_Refugees']
+        lag_2 = country_df.iloc[-2]['Total_Refugees'] if len(country_df) > 1 else lag_1
+        
+        current_year = country_df.iloc[-1]['Year'] + 1
+        refugees = lag_1 # fallback
+
+        while current_year <= year:
+            input_df = pd.DataFrame({
+                'Year': [current_year],
+                'Origin_Encoded': [origin_encoded],
+                'Lag_1': [lag_1],
+                'Lag_2': [lag_2]
+            })
+            
+            pred = int(time_model.predict(input_df)[0])
+            pred = max(0, pred)
+            
+            lag_2 = lag_1
+            lag_1 = pred
+            refugees = pred
+            current_year += 1
+
+    # ---------------- RESOURCE MODEL ----------------
     growth = 0.1  # baseline assumption
     input_data = pd.DataFrame({
         'Year': [year],

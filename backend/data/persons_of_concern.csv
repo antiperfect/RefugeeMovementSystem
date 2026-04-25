@@ -1,0 +1,789 @@
+Year,"Country of Asylum","Country of Origin","Country of Asylum ISO","Country of Origin ISO",Refugees,Asylum-seekers,"Other people in need of international protection"
+1964,India,Tibetan,IND,TIB,44000,0,0
+1965,India,Tibetan,IND,TIB,45000,0,0
+1966,India,Tibetan,IND,TIB,45000,0,0
+1967,India,Tibetan,IND,TIB,50000,0,0
+1968,India,Tibetan,IND,TIB,55000,0,0
+1969,India,Tibetan,IND,TIB,56150,0,0
+1970,India,Tibetan,IND,TIB,56500,0,0
+1971,India,Tibetan,IND,TIB,56180,0,0
+1972,India,Tibetan,IND,TIB,57680,0,0
+1973,India,Tibetan,IND,TIB,58840,0,0
+1974,India,Tibetan,IND,TIB,59900,0,0
+1981,India,Afghanistan,IND,AFG,2690,0,0
+1981,India,"Iran (Islamic Rep. of)",IND,IRN,720,0,0
+1981,India,"Unknown ",IND,UNK,100,0,0
+1982,India,Afghanistan,IND,AFG,3430,0,0
+1982,India,"Iran (Islamic Rep. of)",IND,IRN,1480,0,0
+1982,India,"Unknown ",IND,UNK,100,0,0
+1983,India,Afghanistan,IND,AFG,5300,0,0
+1983,India,"Iran (Islamic Rep. of)",IND,IRN,1560,0,0
+1983,India,"Unknown ",IND,UNK,70,0,0
+1984,India,Afghanistan,IND,AFG,5850,0,0
+1984,India,"Iran (Islamic Rep. of)",IND,IRN,1250,0,0
+1984,India,"Unknown ",IND,UNK,100,0,0
+1985,India,Afghanistan,IND,AFG,5690,0,0
+1985,India,"Iran (Islamic Rep. of)",IND,IRN,940,0,0
+1985,India,"Unknown ",IND,UNK,90,0,0
+1986,India,Afghanistan,IND,AFG,5530,0,0
+1986,India,"Iran (Islamic Rep. of)",IND,IRN,820,0,0
+1986,India,"Unknown ",IND,UNK,90,0,0
+1987,India,Afghanistan,IND,AFG,5180,0,0
+1987,India,"Iran (Islamic Rep. of)",IND,IRN,1440,0,0
+1987,India,"Unknown ",IND,UNK,100,0,0
+1988,India,Afghanistan,IND,AFG,4891,0,0
+1988,India,"Iran (Islamic Rep. of)",IND,IRN,1660,0,0
+1988,India,"Unknown ",IND,UNK,94,0,0
+1989,India,Afghanistan,IND,AFG,8451,0,0
+1989,India,"Iran (Islamic Rep. of)",IND,IRN,982,0,0
+1989,India,"Unknown ",IND,UNK,116,0,0
+1990,India,Afghanistan,IND,AFG,11946,0,0
+1990,India,"Iran (Islamic Rep. of)",IND,IRN,605,0,0
+1990,India,"Sri Lanka",IND,LKA,200000,0,0
+1990,India,"Unknown ",IND,UNK,192,0,0
+1991,India,Afghanistan,IND,AFG,9766,0,0
+1991,India,"Iran (Islamic Rep. of)",IND,IRN,803,0,0
+1991,India,"Sri Lanka",IND,LKA,200000,0,0
+1992,India,Afghanistan,IND,AFG,11002,0,0
+1992,India,Bangladesh,IND,BGD,53187,0,0
+1992,India,China,IND,CHN,80000,0,0
+1992,India,"Iran (Islamic Rep. of)",IND,IRN,806,0,0
+1992,India,"Sri Lanka",IND,LKA,113377,0,0
+1993,India,Afghanistan,IND,AFG,24421,0,0
+1993,India,Angola,IND,AGO,5,0,0
+1993,India,Armenia,IND,ARM,5,0,0
+1993,India,Bangladesh,IND,BGD,56000,0,0
+1993,India,China,IND,CHN,108001,0,0
+1993,India,Ethiopia,IND,ETH,17,0,0
+1993,India,"Iran (Islamic Rep. of)",IND,IRN,244,0,0
+1993,India,Iraq,IND,IRQ,47,0,0
+1993,India,Israel,IND,ISR,27,0,0
+1993,India,"Lao People's Dem. Rep.",IND,LAO,8,0,0
+1993,India,"Sri Lanka",IND,LKA,73463,0,0
+1993,India,Myanmar,IND,MMR,169,0,0
+1993,India,Somalia,IND,SOM,348,0,0
+1993,India,"Serbia and Kosovo: S/RES/1244 (1999)",IND,SRB,5,0,0
+1993,India,"Viet Nam",IND,VNM,5,0,0
+1993,India,Sudan,IND,SDN,37,0,0
+1994,India,Afghanistan,IND,AFG,22362,0,0
+1994,India,Angola,IND,AGO,5,0,0
+1994,India,Armenia,IND,ARM,5,0,0
+1994,India,Bangladesh,IND,BGD,53465,0,0
+1994,India,China,IND,CHN,108001,0,0
+1994,India,Ethiopia,IND,ETH,17,0,0
+1994,India,"Iran (Islamic Rep. of)",IND,IRN,227,0,0
+1994,India,Iraq,IND,IRQ,42,0,0
+1994,India,Israel,IND,ISR,22,0,0
+1994,India,"Lao People's Dem. Rep.",IND,LAO,8,0,0
+1994,India,Liberia,IND,LBR,5,0,0
+1994,India,"Sri Lanka",IND,LKA,73463,0,0
+1994,India,Myanmar,IND,MMR,245,0,0
+1994,India,Rwanda,IND,RWA,9,0,0
+1994,India,Somalia,IND,SOM,352,0,0
+1994,India,"Serbia and Kosovo: S/RES/1244 (1999)",IND,SRB,5,0,0
+1994,India,Sudan,IND,SDN,109,0,0
+1995,India,Afghanistan,IND,AFG,19916,0,0
+1995,India,Armenia,IND,ARM,5,0,0
+1995,India,Bangladesh,IND,BGD,53500,0,0
+1995,India,China,IND,CHN,98000,0,0
+1995,India,Ethiopia,IND,ETH,13,0,0
+1995,India,"Iran (Islamic Rep. of)",IND,IRN,220,0,0
+1995,India,Iraq,IND,IRQ,36,0,0
+1995,India,Israel,IND,ISR,15,0,0
+1995,India,"Lao People's Dem. Rep.",IND,LAO,5,0,0
+1995,India,Liberia,IND,LBR,5,0,0
+1995,India,"Sri Lanka",IND,LKA,55062,0,0
+1995,India,Myanmar,IND,MMR,307,0,0
+1995,India,Rwanda,IND,RWA,5,0,0
+1995,India,Somalia,IND,SOM,286,0,0
+1995,India,"Serbia and Kosovo: S/RES/1244 (1999)",IND,SRB,5,0,0
+1995,India,Sudan,IND,SDN,101,0,0
+1996,India,Afghanistan,IND,AFG,18607,0,0
+1996,India,Armenia,IND,ARM,5,0,0
+1996,India,Bangladesh,IND,BGD,53500,0,0
+1996,India,China,IND,CHN,98000,0,0
+1996,India,Ethiopia,IND,ETH,5,0,0
+1996,India,"Iran (Islamic Rep. of)",IND,IRN,195,0,0
+1996,India,Iraq,IND,IRQ,39,0,0
+1996,India,Israel,IND,ISR,11,0,0
+1996,India,"Lao People's Dem. Rep.",IND,LAO,5,0,0
+1996,India,Liberia,IND,LBR,6,0,0
+1996,India,"Sri Lanka",IND,LKA,62226,0,0
+1996,India,Myanmar,IND,MMR,440,0,0
+1996,India,Somalia,IND,SOM,243,0,0
+1996,India,"Serbia and Kosovo: S/RES/1244 (1999)",IND,SRB,5,0,0
+1996,India,Sudan,IND,SDN,84,0,0
+1997,India,Afghanistan,IND,AFG,17456,0,0
+1997,India,Armenia,IND,ARM,5,0,0
+1997,India,Bangladesh,IND,BGD,40080,0,0
+1997,India,China,IND,CHN,98000,0,0
+1997,India,Ethiopia,IND,ETH,6,0,0
+1997,India,"Iran (Islamic Rep. of)",IND,IRN,214,0,0
+1997,India,Iraq,IND,IRQ,45,0,0
+1997,India,Israel,IND,ISR,8,0,0
+1997,India,"Lao People's Dem. Rep.",IND,LAO,5,0,0
+1997,India,Liberia,IND,LBR,5,0,0
+1997,India,"Sri Lanka",IND,LKA,66498,0,0
+1997,India,Myanmar,IND,MMR,463,0,0
+1997,India,Somalia,IND,SOM,205,0,0
+1997,India,Sudan,IND,SDN,82,0,0
+1998,India,Afghanistan,IND,AFG,16058,0,0
+1998,India,China,IND,CHN,98000,0,0
+1998,India,Ethiopia,IND,ETH,5,0,0
+1998,India,"Iran (Islamic Rep. of)",IND,IRN,203,0,0
+1998,India,Iraq,IND,IRQ,44,0,0
+1998,India,Israel,IND,ISR,7,0,0
+1998,India,"Lao People's Dem. Rep.",IND,LAO,5,0,0
+1998,India,Liberia,IND,LBR,5,0,0
+1998,India,"Sri Lanka",IND,LKA,70337,0,0
+1998,India,Myanmar,IND,MMR,588,0,0
+1998,India,Rwanda,IND,RWA,5,0,0
+1998,India,Somalia,IND,SOM,178,0,0
+1998,India,Sudan,IND,SDN,81,0,0
+1999,India,Afghanistan,IND,AFG,14473,0,0
+1999,India,China,IND,CHN,98001,0,0
+1999,India,Ethiopia,IND,ETH,5,0,0
+1999,India,"Iran (Islamic Rep. of)",IND,IRN,171,0,0
+1999,India,Iraq,IND,IRQ,34,0,0
+1999,India,Israel,IND,ISR,5,0,0
+1999,India,"Lao People's Dem. Rep.",IND,LAO,5,0,0
+1999,India,Liberia,IND,LBR,5,0,0
+1999,India,"Sri Lanka",IND,LKA,66431,0,0
+1999,India,Myanmar,IND,MMR,696,0,0
+1999,India,Somalia,IND,SOM,142,0,0
+1999,India,"Serbia and Kosovo: S/RES/1244 (1999)",IND,SRB,8,0,0
+1999,India,Sudan,IND,SDN,55,0,0
+2000,India,Afghanistan,IND,AFG,12760,34,0
+2000,India,China,IND,CHN,92343,0,0
+2000,India,Ethiopia,IND,ETH,10,0,0
+2000,India,"Iran (Islamic Rep. of)",IND,IRN,114,11,0
+2000,India,Iraq,IND,IRQ,30,0,0
+2000,India,Israel,IND,ISR,5,0,0
+2000,India,Liberia,IND,LBR,5,0,0
+2000,India,"Sri Lanka",IND,LKA,64743,0,0
+2000,India,Myanmar,IND,MMR,779,13,0
+2000,India,Rwanda,IND,RWA,6,0,0
+2000,India,Somalia,IND,SOM,84,0,0
+2000,India,"Serbia and Kosovo: S/RES/1244 (1999)",IND,SRB,5,0,0
+2000,India,Sudan,IND,SDN,56,0,0
+2001,India,Afghanistan,IND,AFG,11972,128,0
+2001,India,China,IND,CHN,92344,0,0
+2001,India,Cuba,IND,CUB,5,0,0
+2001,India,Ethiopia,IND,ETH,10,5,0
+2001,India,"Iran (Islamic Rep. of)",IND,IRN,95,0,0
+2001,India,Iraq,IND,IRQ,24,0,0
+2001,India,Israel,IND,ISR,5,0,0
+2001,India,Liberia,IND,LBR,5,0,0
+2001,India,"Sri Lanka",IND,LKA,64061,0,0
+2001,India,Myanmar,IND,MMR,876,51,0
+2001,India,"Russian Federation",IND,RUS,5,0,0
+2001,India,Rwanda,IND,RWA,6,0,0
+2001,India,Somalia,IND,SOM,68,0,0
+2001,India,"Serbia and Kosovo: S/RES/1244 (1999)",IND,SRB,5,0,0
+2001,India,Sudan,IND,SDN,67,20,0
+2002,India,Afghanistan,IND,AFG,11371,130,0
+2002,India,China,IND,CHN,92346,0,0
+2002,India,Congo,IND,COG,5,0,0
+2002,India,Eritrea,IND,ERI,0,6,0
+2002,India,Ethiopia,IND,ETH,14,17,0
+2002,India,"Iran (Islamic Rep. of)",IND,IRN,87,6,0
+2002,India,Iraq,IND,IRQ,26,5,0
+2002,India,Israel,IND,ISR,16,0,0
+2002,India,Liberia,IND,LBR,7,0,0
+2002,India,"Sri Lanka",IND,LKA,63767,0,0
+2002,India,Myanmar,IND,MMR,1043,272,0
+2002,India,"Russian Federation",IND,RUS,5,0,0
+2002,India,Rwanda,IND,RWA,6,0,0
+2002,India,Somalia,IND,SOM,68,24,0
+2002,India,"Serbia and Kosovo: S/RES/1244 (1999)",IND,SRB,5,0,0
+2002,India,Sudan,IND,SDN,87,33,0
+2003,India,Afghanistan,IND,AFG,10283,88,0
+2003,India,China,IND,CHN,92349,0,0
+2003,India,Eritrea,IND,ERI,0,10,0
+2003,India,Ethiopia,IND,ETH,11,20,0
+2003,India,"Iran (Islamic Rep. of)",IND,IRN,73,5,0
+2003,India,Iraq,IND,IRQ,22,0,0
+2003,India,Israel,IND,ISR,14,0,0
+2003,India,Kazakhstan,IND,KAZ,5,0,0
+2003,India,Liberia,IND,LBR,7,0,0
+2003,India,"Sri Lanka",IND,LKA,60922,0,0
+2003,India,Myanmar,IND,MMR,940,367,0
+2003,India,Rwanda,IND,RWA,7,0,0
+2003,India,Somalia,IND,SOM,66,14,0
+2003,India,Sudan,IND,SDN,55,26,0
+2004,India,Afghanistan,IND,AFG,9761,70,0
+2004,India,China,IND,CHN,94349,0,0
+2004,India,Eritrea,IND,ERI,6,5,0
+2004,India,Ethiopia,IND,ETH,0,12,0
+2004,India,"Iran (Islamic Rep. of)",IND,IRN,59,5,0
+2004,India,Iraq,IND,IRQ,20,0,0
+2004,India,Israel,IND,ISR,7,0,0
+2004,India,Kazakhstan,IND,KAZ,5,0,0
+2004,India,Liberia,IND,LBR,5,0,0
+2004,India,"Sri Lanka",IND,LKA,57274,0,0
+2004,India,Myanmar,IND,MMR,1162,167,0
+2004,India,Somalia,IND,SOM,27,24,0
+2004,India,Sudan,IND,SDN,8,21,0
+2005,India,Afghanistan,IND,AFG,9700,20,0
+2005,India,Bangladesh,IND,BGD,0,14,0
+2005,India,China,IND,CHN,77200,0,0
+2005,India,Congo,IND,COG,0,5,0
+2005,India,Eritrea,IND,ERI,5,11,0
+2005,India,Ethiopia,IND,ETH,0,10,0
+2005,India,"Iran (Islamic Rep. of)",IND,IRN,41,7,0
+2005,India,Iraq,IND,IRQ,17,6,0
+2005,India,Israel,IND,ISR,6,8,0
+2005,India,Kazakhstan,IND,KAZ,5,0,0
+2005,India,"Sri Lanka",IND,LKA,50730,0,0
+2005,India,Myanmar,IND,MMR,1471,102,0
+2005,India,Somalia,IND,SOM,104,101,0
+2005,India,Sudan,IND,SDN,5,12,0
+2006,India,Afghanistan,IND,AFG,9472,137,0
+2006,India,Bangladesh,IND,BGD,0,15,0
+2006,India,China,IND,CHN,77200,0,0
+2006,India,"Dem. Rep. of the Congo",IND,COD,6,7,0
+2006,India,Eritrea,IND,ERI,0,10,0
+2006,India,Ethiopia,IND,ETH,0,11,0
+2006,India,"State of Palestine",IND,PSE,61,38,0
+2006,India,"Iran (Islamic Rep. of)",IND,IRN,44,33,0
+2006,India,Iraq,IND,IRQ,12,13,0
+2006,India,"Sri Lanka",IND,LKA,69609,0,0
+2006,India,Myanmar,IND,MMR,1812,268,0
+2006,India,Somalia,IND,SOM,130,128,0
+2006,India,Sudan,IND,SDN,12,5,0
+2006,India,"Syrian Arab Rep.",IND,SYR,0,6,0
+2007,India,Afghanistan,IND,AFG,9011,690,0
+2007,India,Bangladesh,IND,BGD,0,16,0
+2007,India,China,IND,CHN,77200,0,0
+2007,India,"Dem. Rep. of the Congo",IND,COD,6,12,0
+2007,India,Eritrea,IND,ERI,5,15,0
+2007,India,Ethiopia,IND,ETH,0,6,0
+2007,India,"State of Palestine",IND,PSE,227,44,0
+2007,India,"Iran (Islamic Rep. of)",IND,IRN,45,46,0
+2007,India,Iraq,IND,IRQ,53,96,0
+2007,India,"Sri Lanka",IND,LKA,72934,0,0
+2007,India,Myanmar,IND,MMR,1812,1067,0
+2007,India,Nigeria,IND,NGA,0,5,0
+2007,India,Somalia,IND,SOM,221,389,0
+2007,India,Sudan,IND,SDN,15,29,0
+2007,India,"Syrian Arab Rep.",IND,SYR,5,0,0
+2008,India,Afghanistan,IND,AFG,8441,1661,0
+2008,India,Bangladesh,IND,BGD,0,11,0
+2008,India,China,IND,CHN,100003,0,0
+2008,India,"Dem. Rep. of the Congo",IND,COD,6,6,0
+2008,India,Eritrea,IND,ERI,14,5,0
+2008,India,Ethiopia,IND,ETH,5,10,0
+2008,India,"State of Palestine",IND,PSE,141,32,0
+2008,India,"Iran (Islamic Rep. of)",IND,IRN,62,27,0
+2008,India,Iraq,IND,IRQ,109,80,0
+2008,India,"Sri Lanka",IND,LKA,73286,0,0
+2008,India,Myanmar,IND,MMR,1967,1740,0
+2008,India,Somalia,IND,SOM,489,179,0
+2008,India,Sudan,IND,SDN,16,23,0
+2009,India,Afghanistan,IND,AFG,8528,1335,0
+2009,India,Bangladesh,IND,BGD,0,11,0
+2009,India,China,IND,CHN,100003,0,0
+2009,India,"Dem. Rep. of the Congo",IND,COD,7,14,0
+2009,India,Eritrea,IND,ERI,16,11,0
+2009,India,Ethiopia,IND,ETH,7,11,0
+2009,India,"State of Palestine",IND,PSE,77,17,0
+2009,India,"Iran (Islamic Rep. of)",IND,IRN,46,20,0
+2009,India,Iraq,IND,IRQ,130,24,0
+2009,India,"Sri Lanka",IND,LKA,72883,0,0
+2009,India,Myanmar,IND,MMR,2952,3779,0
+2009,India,Somalia,IND,SOM,655,197,0
+2009,India,Sudan,IND,SDN,14,12,0
+2009,India,Tajikistan,IND,TJK,0,5,0
+2010,India,Afghanistan,IND,AFG,9094,223,0
+2010,India,China,IND,CHN,100003,0,0
+2010,India,"Dem. Rep. of the Congo",IND,COD,11,0,0
+2010,India,Eritrea,IND,ERI,35,9,0
+2010,India,Ethiopia,IND,ETH,9,0,0
+2010,India,"State of Palestine",IND,PSE,78,7,0
+2010,India,"Iran (Islamic Rep. of)",IND,IRN,69,5,0
+2010,India,Iraq,IND,IRQ,122,5,0
+2010,India,"Sri Lanka",IND,LKA,69998,0,0
+2010,India,Myanmar,IND,MMR,4630,3347,0
+2010,India,Pakistan,IND,PAK,0,65,0
+2010,India,Rwanda,IND,RWA,0,5,0
+2010,India,Somalia,IND,SOM,747,75,0
+2010,India,Sudan,IND,SDN,18,0,0
+2011,India,Afghanistan,IND,AFG,9161,619,0
+2011,India,China,IND,CHN,100003,0,0
+2011,India,"Dem. Rep. of the Congo",IND,COD,14,5,0
+2011,India,Eritrea,IND,ERI,50,0,0
+2011,India,Ethiopia,IND,ETH,10,5,0
+2011,India,"State of Palestine",IND,PSE,74,9,0
+2011,India,"Cote d'Ivoire",IND,CIV,5,5,0
+2011,India,"Iran (Islamic Rep. of)",IND,IRN,99,5,0
+2011,India,Iraq,IND,IRQ,111,14,0
+2011,India,"Sri Lanka",IND,LKA,68152,0,0
+2011,India,Myanmar,IND,MMR,6621,2802,0
+2011,India,Pakistan,IND,PAK,23,0,0
+2011,India,Rwanda,IND,RWA,5,0,0
+2011,India,Somalia,IND,SOM,766,30,0
+2011,India,Sudan,IND,SDN,19,6,0
+2011,India,Uzbekistan,IND,UZB,5,0,0
+2011,India,Yemen,IND,YEM,0,8,0
+2012,India,Afghanistan,IND,AFG,9633,571,0
+2012,India,China,IND,CHN,100003,0,0
+2012,India,Cameroon,IND,CMR,0,5,0
+2012,India,"Dem. Rep. of the Congo",IND,COD,29,35,0
+2012,India,Eritrea,IND,ERI,52,8,0
+2012,India,Ethiopia,IND,ETH,8,0,0
+2012,India,"State of Palestine",IND,PSE,60,8,0
+2012,India,"Cote d'Ivoire",IND,CIV,7,0,0
+2012,India,"Iran (Islamic Rep. of)",IND,IRN,123,11,0
+2012,India,Iraq,IND,IRQ,113,28,0
+2012,India,"Sri Lanka",IND,LKA,67165,0,0
+2012,India,Myanmar,IND,MMR,7671,2825,0
+2012,India,Rwanda,IND,RWA,5,0,0
+2012,India,Somalia,IND,SOM,739,35,0
+2012,India,Sudan,IND,SDN,30,11,0
+2012,India,"Syrian Arab Rep.",IND,SYR,6,5,0
+2012,India,Yemen,IND,YEM,0,7,0
+2013,India,Afghanistan,IND,AFG,10328,1049,0
+2013,India,China,IND,CHN,100003,0,0
+2013,India,Cameroon,IND,CMR,0,9,0
+2013,India,"Dem. Rep. of the Congo",IND,COD,42,30,0
+2013,India,Eritrea,IND,ERI,61,10,0
+2013,India,Ethiopia,IND,ETH,9,0,0
+2013,India,"State of Palestine",IND,PSE,68,7,0
+2013,India,"Cote d'Ivoire",IND,CIV,14,5,0
+2013,India,"Iran (Islamic Rep. of)",IND,IRN,121,11,0
+2013,India,Iraq,IND,IRQ,130,35,0
+2013,India,"Sri Lanka",IND,LKA,65674,0,0
+2013,India,Maldives,IND,MDV,5,0,0
+2013,India,Myanmar,IND,MMR,11122,2383,0
+2013,India,Nigeria,IND,NGA,0,31,0
+2013,India,Romania,IND,ROU,5,0,0
+2013,India,Rwanda,IND,RWA,5,0,0
+2013,India,Somalia,IND,SOM,729,30,0
+2013,India,Sudan,IND,SDN,47,35,0
+2013,India,"Syrian Arab Rep.",IND,SYR,18,12,0
+2013,India,Tunisia,IND,TUN,0,5,0
+2013,India,Uzbekistan,IND,UZB,5,5,0
+2013,India,Yemen,IND,YEM,5,12,0
+2014,India,Afghanistan,IND,AFG,10395,1305,0
+2014,India,China,IND,CHN,109018,0,0
+2014,India,Cameroon,IND,CMR,0,25,0
+2014,India,"Dem. Rep. of the Congo",IND,COD,46,27,0
+2014,India,Eritrea,IND,ERI,47,9,0
+2014,India,Ethiopia,IND,ETH,11,5,0
+2014,India,"State of Palestine",IND,PSE,73,5,0
+2014,India,"Cote d'Ivoire",IND,CIV,11,5,0
+2014,India,"Iran (Islamic Rep. of)",IND,IRN,107,7,0
+2014,India,Iraq,IND,IRQ,115,172,0
+2014,India,"Sri Lanka",IND,LKA,65057,0,0
+2014,India,Maldives,IND,MDV,5,0,0
+2014,India,Mali,IND,MLI,0,5,0
+2014,India,Myanmar,IND,MMR,14301,2970,0
+2014,India,Nigeria,IND,NGA,0,321,0
+2014,India,Philippines,IND,PHL,0,5,0
+2014,India,Rwanda,IND,RWA,5,0,0
+2014,India,Somalia,IND,SOM,654,78,0
+2014,India,Sudan,IND,SDN,49,64,0
+2014,India,"Syrian Arab Rep.",IND,SYR,27,18,0
+2014,India,Uganda,IND,UGA,0,6,0
+2014,India,Ukraine,IND,UKR,0,5,0
+2014,India,Uzbekistan,IND,UZB,5,6,0
+2014,India,Yemen,IND,YEM,5,19,0
+2015,India,Afghanistan,IND,AFG,10196,2728,0
+2015,India,China,IND,CHN,110098,0,0
+2015,India,Cameroon,IND,CMR,0,25,0
+2015,India,"Dem. Rep. of the Congo",IND,COD,43,16,0
+2015,India,Eritrea,IND,ERI,42,5,0
+2015,India,Ethiopia,IND,ETH,14,0,0
+2015,India,"State of Palestine",IND,PSE,79,8,0
+2015,India,"Cote d'Ivoire",IND,CIV,9,5,0
+2015,India,"Iran (Islamic Rep. of)",IND,IRN,72,5,0
+2015,India,Iraq,IND,IRQ,287,167,0
+2015,India,"Sri Lanka",IND,LKA,64208,0,0
+2015,India,Maldives,IND,MDV,5,0,0
+2015,India,Mexico,IND,MEX,0,5,0
+2015,India,Mali,IND,MLI,0,5,0
+2015,India,Myanmar,IND,MMR,15735,2891,0
+2015,India,Nigeria,IND,NGA,0,111,0
+2015,India,Philippines,IND,PHL,0,5,0
+2015,India,"Russian Federation",IND,RUS,0,5,0
+2015,India,Rwanda,IND,RWA,5,5,0
+2015,India,"Saudi Arabia",IND,SAU,5,0,0
+2015,India,Somalia,IND,SOM,465,188,0
+2015,India,Sudan,IND,SDN,65,50,0
+2015,India,"Syrian Arab Rep.",IND,SYR,41,20,0
+2015,India,Uganda,IND,UGA,0,5,0
+2015,India,Ukraine,IND,UKR,0,13,0
+2015,India,Uzbekistan,IND,UZB,5,5,0
+2015,India,Yemen,IND,YEM,5,209,0
+2016,India,Afghanistan,IND,AFG,7693,4255,0
+2016,India,Angola,IND,AGO,0,5,0
+2016,India,Burundi,IND,BDI,0,5,0
+2016,India,China,IND,CHN,110098,0,0
+2016,India,Cameroon,IND,CMR,0,25,0
+2016,India,Congo,IND,COG,0,6,0
+2016,India,"Dem. Rep. of the Congo",IND,COD,50,33,0
+2016,India,Eritrea,IND,ERI,38,0,0
+2016,India,Ethiopia,IND,ETH,21,5,0
+2016,India,"State of Palestine",IND,PSE,68,18,0
+2016,India,"Cote d'Ivoire",IND,CIV,7,8,0
+2016,India,"Iran (Islamic Rep. of)",IND,IRN,65,12,0
+2016,India,Iraq,IND,IRQ,363,210,0
+2016,India,Libya,IND,LBY,5,0,0
+2016,India,"Sri Lanka",IND,LKA,63162,0,0
+2016,India,Maldives,IND,MDV,5,0,0
+2016,India,Mali,IND,MLI,0,5,0
+2016,India,Myanmar,IND,MMR,15561,3677,0
+2016,India,Nigeria,IND,NGA,0,73,0
+2016,India,Philippines,IND,PHL,0,5,0
+2016,India,"Russian Federation",IND,RUS,0,10,0
+2016,India,Rwanda,IND,RWA,5,0,0
+2016,India,"Saudi Arabia",IND,SAU,5,0,0
+2016,India,Somalia,IND,SOM,554,202,0
+2016,India,"South Sudan",IND,SSD,0,33,0
+2016,India,Sudan,IND,SDN,78,43,0
+2016,India,"Syrian Arab Rep.",IND,SYR,65,35,0
+2016,India,Uganda,IND,UGA,0,6,0
+2016,India,Ukraine,IND,UKR,0,8,0
+2016,India,Yemen,IND,YEM,5,530,0
+2017,India,Afghanistan,IND,AFG,7758,5743,0
+2017,India,Burundi,IND,BDI,0,5,0
+2017,India,China,IND,CHN,108008,0,0
+2017,India,Cameroon,IND,CMR,0,19,0
+2017,India,Congo,IND,COG,0,11,0
+2017,India,"Dem. Rep. of the Congo",IND,COD,49,42,0
+2017,India,Eritrea,IND,ERI,29,6,0
+2017,India,Ethiopia,IND,ETH,20,30,0
+2017,India,"State of Palestine",IND,PSE,75,0,0
+2017,India,"Cote d'Ivoire",IND,CIV,5,7,0
+2017,India,"Iran (Islamic Rep. of)",IND,IRN,57,12,0
+2017,India,Iraq,IND,IRQ,344,110,0
+2017,India,Libya,IND,LBY,0,6,0
+2017,India,"Sri Lanka",IND,LKA,61842,0,0
+2017,India,Maldives,IND,MDV,5,0,0
+2017,India,Myanmar,IND,MMR,18089,3152,0
+2017,India,Nigeria,IND,NGA,0,8,0
+2017,India,"Russian Federation",IND,RUS,0,7,0
+2017,India,Rwanda,IND,RWA,5,0,0
+2017,India,"Saudi Arabia",IND,SAU,5,0,0
+2017,India,Somalia,IND,SOM,664,269,0
+2017,India,"South Sudan",IND,SSD,6,73,0
+2017,India,Sudan,IND,SDN,89,41,0
+2017,India,"Syrian Arab Rep.",IND,SYR,87,17,0
+2017,India,Tajikistan,IND,TJK,0,5,0
+2017,India,Uganda,IND,UGA,0,5,0
+2017,India,Ukraine,IND,UKR,0,6,0
+2017,India,Yemen,IND,YEM,5,934,0
+2018,India,Afghanistan,IND,AFG,6984,7864,0
+2018,India,Egypt,IND,EGY,0,5,0
+2018,India,Burundi,IND,BDI,0,5,0
+2018,India,China,IND,CHN,108008,0,0
+2018,India,Cameroon,IND,CMR,0,89,0
+2018,India,Congo,IND,COG,5,14,0
+2018,India,"Dem. Rep. of the Congo",IND,COD,43,41,0
+2018,India,Eritrea,IND,ERI,15,11,0
+2018,India,Ethiopia,IND,ETH,20,22,0
+2018,India,"State of Palestine",IND,PSE,73,5,0
+2018,India,"Cote d'Ivoire",IND,CIV,5,5,0
+2018,India,"Iran (Islamic Rep. of)",IND,IRN,53,32,0
+2018,India,Iraq,IND,IRQ,277,99,0
+2018,India,Libya,IND,LBY,0,7,0
+2018,India,"Sri Lanka",IND,LKA,60802,0,0
+2018,India,Maldives,IND,MDV,5,0,0
+2018,India,Myanmar,IND,MMR,18813,2064,0
+2018,India,"Russian Federation",IND,RUS,0,7,0
+2018,India,Rwanda,IND,RWA,5,5,0
+2018,India,"Saudi Arabia",IND,SAU,5,0,0
+2018,India,Somalia,IND,SOM,608,330,0
+2018,India,"South Sudan",IND,SSD,5,85,0
+2018,India,Sudan,IND,SDN,78,66,0
+2018,India,"Syrian Arab Rep.",IND,SYR,83,17,0
+2018,India,"United Rep. of Tanzania",IND,TZA,0,5,0
+2018,India,Thailand,IND,THA,0,5,0
+2018,India,Tajikistan,IND,TJK,0,8,0
+2018,India,Ukraine,IND,UKR,0,7,0
+2018,India,Uzbekistan,IND,UZB,0,6,0
+2018,India,Yemen,IND,YEM,0,1134,0
+2019,India,Afghanistan,IND,AFG,7470,8219,0
+2019,India,Egypt,IND,EGY,0,8,0
+2019,India,Benin,IND,BEN,0,5,0
+2019,India,China,IND,CHN,108008,0,0
+2019,India,Cameroon,IND,CMR,0,178,0
+2019,India,Congo,IND,COG,5,34,0
+2019,India,"Dem. Rep. of the Congo",IND,COD,42,48,0
+2019,India,Eritrea,IND,ERI,7,13,0
+2019,India,Ethiopia,IND,ETH,18,24,0
+2019,India,"State of Palestine",IND,PSE,72,7,0
+2019,India,Ghana,IND,GHA,0,20,0
+2019,India,Guinea-Bissau,IND,GNB,0,5,0
+2019,India,"Cote d'Ivoire",IND,CIV,5,86,0
+2019,India,"Iran (Islamic Rep. of)",IND,IRN,49,56,0
+2019,India,Iraq,IND,IRQ,172,51,0
+2019,India,Kenya,IND,KEN,0,6,0
+2019,India,Libya,IND,LBY,8,0,0
+2019,India,"Sri Lanka",IND,LKA,59428,0,0
+2019,India,Maldives,IND,MDV,5,0,0
+2019,India,Myanmar,IND,MMR,2574,676,0
+2019,India,Nigeria,IND,NGA,0,100,0
+2019,India,"Russian Federation",IND,RUS,0,14,0
+2019,India,Rwanda,IND,RWA,5,5,0
+2019,India,"Saudi Arabia",IND,SAU,5,0,0
+2019,India,Senegal,IND,SEN,0,7,0
+2019,India,Somalia,IND,SOM,533,319,0
+2019,India,"South Sudan",IND,SSD,0,95,0
+2019,India,Stateless,IND,XXA,16524,1206,0
+2019,India,Sudan,IND,SDN,69,116,0
+2019,India,"Syrian Arab Rep.",IND,SYR,70,29,0
+2019,India,"United Rep. of Tanzania",IND,TZA,0,5,0
+2019,India,Tajikistan,IND,TJK,0,5,0
+2019,India,Turkmenistan,IND,TKM,0,5,0
+2019,India,Türkiye,IND,TUR,29,0,0
+2019,India,Uganda,IND,UGA,0,5,0
+2019,India,Ukraine,IND,UKR,0,9,0
+2019,India,Uzbekistan,IND,UZB,0,7,0
+2019,India,"Venezuela (Bolivarian Republic of)",IND,VEN,0,9,0
+2019,India,Yemen,IND,YEM,5,830,0
+2020,India,Afghanistan,IND,AFG,8275,6857,0
+2020,India,Egypt,IND,EGY,0,8,0
+2020,India,Burundi,IND,BDI,0,5,0
+2020,India,Benin,IND,BEN,0,5,0
+2020,India,Bangladesh,IND,BGD,8,0,0
+2020,India,China,IND,CHN,73407,0,0
+2020,India,Cameroon,IND,CMR,0,175,0
+2020,India,Congo,IND,COG,8,42,0
+2020,India,"Dem. Rep. of the Congo",IND,COD,49,70,0
+2020,India,Eritrea,IND,ERI,9,13,0
+2020,India,Ethiopia,IND,ETH,15,21,0
+2020,India,"State of Palestine",IND,PSE,58,8,0
+2020,India,Ghana,IND,GHA,0,44,0
+2020,India,Guinea,IND,GIN,0,6,0
+2020,India,"Cote d'Ivoire",IND,CIV,5,125,0
+2020,India,"Iran (Islamic Rep. of)",IND,IRN,49,57,0
+2020,India,Iraq,IND,IRQ,153,52,0
+2020,India,Kenya,IND,KEN,0,20,0
+2020,India,Liberia,IND,LBR,0,5,0
+2020,India,Libya,IND,LBY,8,7,0
+2020,India,"Sri Lanka",IND,LKA,93259,0,0
+2020,India,Maldives,IND,MDV,5,0,0
+2020,India,Myanmar,IND,MMR,19398,1974,0
+2020,India,Nigeria,IND,NGA,0,242,0
+2020,India,"Russian Federation",IND,RUS,0,12,0
+2020,India,Rwanda,IND,RWA,5,10,0
+2020,India,"Saudi Arabia",IND,SAU,5,0,0
+2020,India,Senegal,IND,SEN,0,18,0
+2020,India,"Sierra Leone",IND,SLE,0,5,0
+2020,India,Somalia,IND,SOM,514,288,0
+2020,India,"South Sudan",IND,SSD,0,98,0
+2020,India,Stateless,IND,XXA,0,0,0
+2020,India,Sudan,IND,SDN,65,121,0
+2020,India,"Syrian Arab Rep.",IND,SYR,63,57,0
+2020,India,"United Rep. of Tanzania",IND,TZA,0,6,0
+2020,India,Tajikistan,IND,TJK,0,5,0
+2020,India,Turkmenistan,IND,TKM,0,5,0
+2020,India,Türkiye,IND,TUR,5,0,0
+2020,India,Uganda,IND,UGA,0,7,0
+2020,India,Ukraine,IND,UKR,0,5,0
+2020,India,Uzbekistan,IND,UZB,0,5,0
+2020,India,"Venezuela (Bolivarian Republic of)",IND,VEN,5,6,0
+2020,India,Yemen,IND,YEM,5,833,0
+2021,India,Afghanistan,IND,AFG,9678,6569,0
+2021,India,Egypt,IND,EGY,0,10,0
+2021,India,Burundi,IND,BDI,0,5,0
+2021,India,Bangladesh,IND,BGD,8,0,0
+2021,India,China,IND,CHN,73407,0,0
+2021,India,Cameroon,IND,CMR,17,207,0
+2021,India,Congo,IND,COG,8,36,0
+2021,India,"Dem. Rep. of the Congo",IND,COD,54,127,0
+2021,India,Eritrea,IND,ERI,13,10,0
+2021,India,Ethiopia,IND,ETH,23,35,0
+2021,India,"State of Palestine",IND,PSE,52,11,0
+2021,India,Ghana,IND,GHA,0,69,0
+2021,India,Guinea,IND,GIN,0,11,0
+2021,India,"Cote d'Ivoire",IND,CIV,5,176,0
+2021,India,"Iran (Islamic Rep. of)",IND,IRN,58,44,0
+2021,India,Iraq,IND,IRQ,150,47,0
+2021,India,Kenya,IND,KEN,0,35,0
+2021,India,Liberia,IND,LBR,0,5,0
+2021,India,Libya,IND,LBY,8,6,0
+2021,India,"Sri Lanka",IND,LKA,92431,0,0
+2021,India,Maldives,IND,MDV,5,0,0
+2021,India,Myanmar,IND,MMR,35832,3785,0
+2021,India,Nigeria,IND,NGA,0,552,0
+2021,India,"Russian Federation",IND,RUS,0,15,0
+2021,India,Rwanda,IND,RWA,5,10,0
+2021,India,"Saudi Arabia",IND,SAU,5,0,0
+2021,India,Senegal,IND,SEN,0,28,0
+2021,India,"Sierra Leone",IND,SLE,0,8,0
+2021,India,Somalia,IND,SOM,497,279,0
+2021,India,"South Sudan",IND,SSD,5,100,0
+2021,India,Stateless,IND,XXA,0,0,0
+2021,India,Sudan,IND,SDN,61,144,0
+2021,India,"Syrian Arab Rep.",IND,SYR,69,64,0
+2021,India,"United Rep. of Tanzania",IND,TZA,0,13,0
+2021,India,Tajikistan,IND,TJK,0,5,0
+2021,India,Turkmenistan,IND,TKM,0,5,0
+2021,India,Türkiye,IND,TUR,8,0,0
+2021,India,Uganda,IND,UGA,0,38,0
+2021,India,Ukraine,IND,UKR,0,5,0
+2021,India,Uzbekistan,IND,UZB,0,10,0
+2021,India,"Venezuela (Bolivarian Republic of)",IND,VEN,5,6,0
+2021,India,Yemen,IND,YEM,9,898,0
+2024,India,Afghanistan,IND,AFG,8671,1093,0
+2024,India,Egypt,IND,EGY,0,5,0
+2024,India,Bangladesh,IND,BGD,9,0,0
+2024,India,China,IND,CHN,63169,0,0
+2024,India,Cameroon,IND,CMR,80,133,0
+2024,India,Congo,IND,COG,0,17,0
+2024,India,"Dem. Rep. of the Congo",IND,COD,80,115,0
+2024,India,Eritrea,IND,ERI,8,10,0
+2024,India,Ethiopia,IND,ETH,23,59,0
+2024,India,"State of Palestine",IND,PSE,37,15,0
+2024,India,Ghana,IND,GHA,0,5,0
+2024,India,"Cote d'Ivoire",IND,CIV,0,71,0
+2024,India,"Iran (Islamic Rep. of)",IND,IRN,50,83,0
+2024,India,Iraq,IND,IRQ,92,29,0
+2024,India,Kenya,IND,KEN,0,5,0
+2024,India,Liberia,IND,LBR,0,6,0
+2024,India,"Sri Lanka",IND,LKA,90365,0,0
+2024,India,Maldives,IND,MDV,5,0,0
+2024,India,Myanmar,IND,MMR,72826,8856,0
+2024,India,Nigeria,IND,NGA,0,22,0
+2024,India,"Russian Federation",IND,RUS,0,145,0
+2024,India,Rwanda,IND,RWA,5,0,0
+2024,India,Senegal,IND,SEN,0,5,0
+2024,India,"Sierra Leone",IND,SLE,0,5,0
+2024,India,Somalia,IND,SOM,508,618,0
+2024,India,"South Sudan",IND,SSD,10,26,0
+2024,India,Stateless,IND,XXA,0,0,0
+2024,India,Sudan,IND,SDN,200,1265,0
+2024,India,"Syrian Arab Rep.",IND,SYR,46,89,0
+2024,India,"United Rep. of Tanzania",IND,TZA,0,6,0
+2024,India,Tajikistan,IND,TJK,5,0,0
+2024,India,Turkmenistan,IND,TKM,0,5,0
+2024,India,Türkiye,IND,TUR,5,0,0
+2024,India,Uganda,IND,UGA,5,61,0
+2024,India,Ukraine,IND,UKR,0,89,0
+2024,India,"Venezuela (Bolivarian Republic of)",IND,VEN,5,5,0
+2024,India,Yemen,IND,YEM,559,400,0
+2025,India,Afghanistan,IND,AFG,8254,890,0
+2025,India,Bangladesh,IND,BGD,9,0,0
+2025,India,Belarus,IND,BLR,0,5,0
+2025,India,China,IND,CHN,63169,0,0
+2025,India,Cameroon,IND,CMR,79,136,0
+2025,India,Congo,IND,COG,0,25,0
+2025,India,"Dem. Rep. of the Congo",IND,COD,79,111,0
+2025,India,Djibouti,IND,DJI,0,6,0
+2025,India,Eritrea,IND,ERI,7,8,0
+2025,India,Ethiopia,IND,ETH,20,57,0
+2025,India,"State of Palestine",IND,PSE,38,19,0
+2025,India,Ghana,IND,GHA,0,5,0
+2025,India,"Cote d'Ivoire",IND,CIV,0,21,0
+2025,India,"Iran (Islamic Rep. of)",IND,IRN,49,65,0
+2025,India,Iraq,IND,IRQ,85,34,0
+2025,India,Liberia,IND,LBR,0,5,0
+2025,India,"Sri Lanka",IND,LKA,89863,0,0
+2025,India,Maldives,IND,MDV,5,0,0
+2025,India,Myanmar,IND,MMR,73898,9839,0
+2025,India,"Russian Federation",IND,RUS,0,306,0
+2025,India,Rwanda,IND,RWA,5,0,0
+2025,India,Senegal,IND,SEN,0,5,0
+2025,India,"Sierra Leone",IND,SLE,0,5,0
+2025,India,Somalia,IND,SOM,497,753,0
+2025,India,"South Sudan",IND,SSD,10,36,0
+2025,India,Stateless,IND,XXA,0,0,0
+2025,India,Sudan,IND,SDN,189,1237,0
+2025,India,"Syrian Arab Rep.",IND,SYR,40,127,0
+2025,India,"United Rep. of Tanzania",IND,TZA,0,5,0
+2025,India,Tajikistan,IND,TJK,5,0,0
+2025,India,Turkmenistan,IND,TKM,0,5,0
+2025,India,Türkiye,IND,TUR,5,0,0
+2025,India,Uganda,IND,UGA,5,54,0
+2025,India,Ukraine,IND,UKR,0,93,0
+2025,India,"Venezuela (Bolivarian Republic of)",IND,VEN,5,5,0
+2025,India,Yemen,IND,YEM,562,458,0
+2023,India,Afghanistan,IND,AFG,10109,2115,0
+2023,India,Egypt,IND,EGY,0,6,0
+2023,India,Armenia,IND,ARM,0,5,0
+2023,India,Burundi,IND,BDI,0,10,0
+2023,India,Bangladesh,IND,BGD,12,0,0
+2023,India,Belarus,IND,BLR,0,5,0
+2023,India,"Bosnia and Herzegovina",IND,BIH,0,5,0
+2023,India,Chad,IND,TCD,0,5,0
+2023,India,China,IND,CHN,73406,0,0
+2023,India,Cameroon,IND,CMR,64,172,0
+2023,India,Congo,IND,COG,6,19,0
+2023,India,"Dem. Rep. of the Congo",IND,COD,91,143,0
+2023,India,Eritrea,IND,ERI,9,9,0
+2023,India,Ethiopia,IND,ETH,24,63,0
+2023,India,"State of Palestine",IND,PSE,47,5,0
+2023,India,Ghana,IND,GHA,0,27,0
+2023,India,Guinea,IND,GIN,0,5,0
+2023,India,"Cote d'Ivoire",IND,CIV,5,136,0
+2023,India,"Iran (Islamic Rep. of)",IND,IRN,56,140,0
+2023,India,Iraq,IND,IRQ,116,37,0
+2023,India,Kenya,IND,KEN,0,25,0
+2023,India,Liberia,IND,LBR,0,8,0
+2023,India,"Sri Lanka",IND,LKA,91166,0,0
+2023,India,Maldives,IND,MDV,5,0,0
+2023,India,Myanmar,IND,MMR,76513,7243,0
+2023,India,Nigeria,IND,NGA,0,185,0
+2023,India,"Russian Federation",IND,RUS,0,62,0
+2023,India,Rwanda,IND,RWA,5,6,0
+2023,India,"Saudi Arabia",IND,SAU,5,0,0
+2023,India,Senegal,IND,SEN,0,12,0
+2023,India,"Sierra Leone",IND,SLE,0,7,0
+2023,India,Somalia,IND,SOM,533,359,0
+2023,India,"South Sudan",IND,SSD,5,23,0
+2023,India,Stateless,IND,XXA,0,0,0
+2023,India,Sudan,IND,SDN,151,660,0
+2023,India,"Syrian Arab Rep.",IND,SYR,56,91,0
+2023,India,"United Rep. of Tanzania",IND,TZA,0,11,0
+2023,India,Tajikistan,IND,TJK,5,0,0
+2023,India,Turkmenistan,IND,TKM,0,5,0
+2023,India,Türkiye,IND,TUR,5,0,0
+2023,India,Uganda,IND,UGA,0,49,0
+2023,India,Ukraine,IND,UKR,0,66,0
+2023,India,Uzbekistan,IND,UZB,0,5,0
+2023,India,"Venezuela (Bolivarian Republic of)",IND,VEN,5,5,0
+2023,India,Yemen,IND,YEM,468,197,0
+2022,India,Afghanistan,IND,AFG,9858,5181,0
+2022,India,Egypt,IND,EGY,0,6,0
+2022,India,Burundi,IND,BDI,0,5,0
+2022,India,Bangladesh,IND,BGD,8,0,0
+2022,India,"Bosnia and Herzegovina",IND,BIH,0,5,0
+2022,India,China,IND,CHN,72294,0,0
+2022,India,Cameroon,IND,CMR,31,250,0
+2022,India,Congo,IND,COG,11,30,0
+2022,India,"Dem. Rep. of the Congo",IND,COD,76,150,0
+2022,India,Eritrea,IND,ERI,13,14,0
+2022,India,Ethiopia,IND,ETH,26,67,0
+2022,India,"State of Palestine",IND,PSE,48,14,0
+2022,India,Ghana,IND,GHA,0,66,0
+2022,India,Guinea,IND,GIN,0,11,0
+2022,India,"Cote d'Ivoire",IND,CIV,5,180,0
+2022,India,"Iran (Islamic Rep. of)",IND,IRN,60,100,0
+2022,India,Iraq,IND,IRQ,137,41,0
+2022,India,Kenya,IND,KEN,0,34,0
+2022,India,Liberia,IND,LBR,0,5,0
+2022,India,Libya,IND,LBY,8,6,0
+2022,India,"Sri Lanka",IND,LKA,92072,0,0
+2022,India,Maldives,IND,MDV,5,0,0
+2022,India,Myanmar,IND,MMR,67482,7125,0
+2022,India,Nigeria,IND,NGA,0,557,0
+2022,India,"Russian Federation",IND,RUS,0,34,0
+2022,India,Rwanda,IND,RWA,5,10,0
+2022,India,"Saudi Arabia",IND,SAU,5,0,0
+2022,India,Senegal,IND,SEN,0,28,0
+2022,India,"Sierra Leone",IND,SLE,0,8,0
+2022,India,Somalia,IND,SOM,508,370,0
+2022,India,"South Sudan",IND,SSD,5,105,0
+2022,India,Stateless,IND,XXA,0,0,0
+2022,India,Sudan,IND,SDN,82,169,0
+2022,India,"Syrian Arab Rep.",IND,SYR,71,74,0
+2022,India,"United Rep. of Tanzania",IND,TZA,0,12,0
+2022,India,Tajikistan,IND,TJK,0,5,0
+2022,India,Türkiye,IND,TUR,5,0,0
+2022,India,Uganda,IND,UGA,0,38,0
+2022,India,Ukraine,IND,UKR,0,58,0
+2022,India,Uzbekistan,IND,UZB,0,12,0
+2022,India,"Venezuela (Bolivarian Republic of)",IND,VEN,5,6,0
+2022,India,Yemen,IND,YEM,15,1018,0
