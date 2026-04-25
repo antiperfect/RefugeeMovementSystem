@@ -1,5 +1,4 @@
 import { useEffect, useState, useMemo } from 'react';
-import unData from '../data/undata.json';
 import { getEndpoint } from '../config/api';
 
 interface PredictionResult {
@@ -13,11 +12,7 @@ interface PredictionResult {
   is_neighbor: boolean;
 }
 
-interface RefugeeData {
-  year: number;
-  origin: string;
-  refugees: number;
-}
+
 
 const NEIGHBOR_COUNTRIES = [
   'Afghanistan', 'Bangladesh', 'China', 'Myanmar',
