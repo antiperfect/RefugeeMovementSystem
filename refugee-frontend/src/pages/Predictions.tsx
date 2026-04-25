@@ -1,5 +1,5 @@
 import { useEffect, useState, useMemo } from 'react';
-import { getEndpoint } from '../config/api';
+import { getEndpoint, fetchWithCache } from '../config/api';
 
 interface PredictionResult {
   country: string;
@@ -40,9 +40,7 @@ const Predictions = () => {
       setLoading(true);
       setError(null);
       try {
-        const res = await fetch(getEndpoint(`/api/predict-all?year=${predictionYear}`));
-        if (!res.ok) throw new Error(`API returned ${res.status}`);
-        const data = await res.json();
+        const data = await fetchWithCache(`/api/predict-all?year=${predictionYear}`);
         setPredictions(data);
       } catch (err: any) {
         console.error('Flask API error:', err);
@@ -96,12 +94,9 @@ const Predictions = () => {
   useEffect(() => {
     const fetchSeries = async () => {
       try {
-        const url = getEndpoint(selectedCountry ? `/api/series?country=${encodeURIComponent(selectedCountry)}` : '/api/series');
-        const res = await fetch(url);
-        if (res.ok) {
-          const data = await res.json();
-          setHistoricalSeries(data);
-        }
+        const path = selectedCountry ? `/api/series?country=${encodeURIComponent(selectedCountry)}` : '/api/series';
+        const data = await fetchWithCache(path);
+        setHistoricalSeries(data);
       } catch (err) {
         console.error('Error fetching series:', err);
       }

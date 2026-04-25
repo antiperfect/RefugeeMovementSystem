@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
+from flask_compress import Compress
 import joblib
 import pandas as pd
 import json
@@ -8,6 +9,7 @@ import requests as http_requests
 
 app = Flask(__name__)
 CORS(app)
+Compress(app)
 
 # Load models
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -34,59 +36,92 @@ NEIGHBORS = [
 PREDICTION_CACHE = {}
 SERIES_CACHE = {}
 
-def precompute_predictions(year=2026):
-    """Precompute all predictions for a given year to avoid slow runtime calculations."""
-    print(f"Precomputing predictions for {year}...", flush=True)
-    for country in mapping.keys():
-        result = predict_for_country(country, year)
-        if result:
-            PREDICTION_CACHE[country] = result
-    
-    # Precompute All Origins Series
+def precompute_predictions(target_year=2026):
+    """Bulk precompute predictions for all countries up to 2030.
+    Uses vectorization where possible to avoid slow iterative dataframe creation.
+    """
+    print(f"Starting optimized precomputation up to 2030...", flush=True)
     MAX_HIST_YEAR = int(historical_df['Year'].max())
-    print(f"Precomputing All Origins Series (2000-2030). Last historical year: {MAX_HIST_YEAR}", flush=True)
-    series = []
     
-    # Historical
+    # 1. Historical Aggregation
     hist_agg = historical_df.groupby('Year')['Total_Refugees'].sum().reset_index()
     hist_agg.fillna(0, inplace=True)
+    all_series = []
     for _, row in hist_agg.iterrows():
         y = int(row['Year'])
         if 2000 <= y <= MAX_HIST_YEAR:
-            series.append({'x': int(y), 'y': int(row['Total_Refugees'])})
-    
-    # Predicted
-    pred_map = {}
+            all_series.append({'x': y, 'y': int(row['Total_Refugees'])})
+
+    # 2. Iterative Bulk Prediction
+    # state[country] = {year, l1, l2, enc}
+    states = {}
     for c in mapping.keys():
         c_df = historical_df[historical_df['Country of Origin'] == c].sort_values('Year')
         if c_df.empty: continue
         
-        last_y = int(c_df.iloc[-1]['Year'])
-        l1 = int(c_df.iloc[-1]['Total_Refugees'])
-        l2 = int(c_df.iloc[-2]['Total_Refugees'] if len(c_df) > 1 else l1)
-        
-        if pd.isna(l1): l1 = 0
-        if pd.isna(l2): l2 = 0
-        
-        enc = mapping[c]
-        cy = last_y + 1
-        
-        while cy <= 2030:
-            input_df = pd.DataFrame({'Year': [cy], 'Origin_Encoded': [enc], 'Lag_1': [l1], 'Lag_2': [l2]})
-            p = max(0, int(time_model.predict(input_df)[0]))
-            
-            # Only add to pred_map if it's AFTER the historical data for this country
-            # and ALSO after the global historical data cutoff to avoid overlaps
-            if cy > MAX_HIST_YEAR:
-                pred_map[cy] = pred_map.get(cy, 0) + p
-            
-            l2, l1, cy = l1, p, cy + 1
-            
-    for y, val in sorted(pred_map.items()):
-        series.append({'x': int(y), 'y': int(val)})
+        l1 = c_df.iloc[-1]['Total_Refugees']
+        l2 = c_df.iloc[-2]['Total_Refugees'] if len(c_df) > 1 else l1
+        states[c] = {
+            'year': int(c_df.iloc[-1]['Year']),
+            'l1': 0 if pd.isna(l1) else int(l1),
+            'l2': 0 if pd.isna(l2) else int(l2),
+            'enc': mapping[c]
+        }
+
+    # Predictive map for all-origins series
+    pred_map = {} # year -> sum
     
-    SERIES_CACHE['all'] = series
-    print("Precomputation complete.", flush=True)
+    # Progress from MAX_HIST_YEAR + 1 to 2030
+    for curr_y in range(MAX_HIST_YEAR + 1, 2031):
+        # Build batch for this year
+        batch_countries = []
+        batch_inputs = []
+        
+        for c, s in states.items():
+            if s['year'] < curr_y:
+                batch_countries.append(c)
+                batch_inputs.append([curr_y, s['enc'], s['l1'], s['l2']])
+        
+        if not batch_inputs:
+            continue
+            
+        # Bulk predict
+        input_df = pd.DataFrame(batch_inputs, columns=['Year', 'Origin_Encoded', 'Lag_1', 'Lag_2'])
+        preds = time_model.predict(input_df)
+        
+        # Update states and caches
+        for i, c in enumerate(batch_countries):
+            p = max(0, int(preds[i]))
+            states[c]['l2'] = states[c]['l1']
+            states[c]['l1'] = p
+            states[c]['year'] = curr_y
+            
+            # Add to series map
+            pred_map[curr_y] = pred_map.get(curr_y, 0) + p
+            
+            # If this is the target year, update the PREDICTION_CACHE
+            # This requires resource model too
+            if curr_y == target_year:
+                # Simple resource calc for now or full call
+                res_input = pd.DataFrame([[p]], columns=['Total_Refugees'])
+                res = resource_model.predict(res_input)[0]
+                PREDICTION_CACHE[c] = {
+                    'country': c,
+                    'year': curr_y,
+                    'refugees': p,
+                    'food': int(res[0]),
+                    'shelter': int(res[1]),
+                    'medical': int(res[2]),
+                    'water': int(res[3]),
+                    'is_neighbor': c in NEIGHBORS
+                }
+
+    # Combine series
+    for y, val in sorted(pred_map.items()):
+        all_series.append({'x': y, 'y': val})
+    
+    SERIES_CACHE['all'] = all_series
+    print("Optimized precomputation complete.", flush=True)
 
 def predict_for_country(country, year):
     """Run both models for a single country+year and return dict."""
@@ -215,9 +250,20 @@ def api_predict_all():
     year = request.args.get('year', 2026, type=int)
     
     # If it's the default year and we have a cache, use it
-    if year == 2026 and PREDICTION_CACHE:
-        results = list(PREDICTION_CACHE.values())
+    if year == 2026:
+        if not PREDICTION_CACHE:
+            try:
+                precompute_predictions(2026)
+            except Exception as e:
+                print(f"Fallback precomputation for predict-all failed: {e}")
+        
+        if PREDICTION_CACHE:
+            results = list(PREDICTION_CACHE.values())
+        else:
+            results = []
     else:
+        # For non-default years, we still calculate on the fly for now
+        # but we could also precompute these if needed.
         results = []
         for country in mapping.keys():
             result = predict_for_country(country, year)
@@ -297,39 +343,15 @@ def api_series():
         if 'all' in SERIES_CACHE:
             return jsonify(SERIES_CACHE['all'])
             
-        # Historical
-        MAX_HIST_YEAR = int(historical_df['Year'].max())
-        hist_agg = historical_df.groupby('Year')['Total_Refugees'].sum().reset_index()
-        hist_agg.fillna(0, inplace=True)
-        for _, row in hist_agg.iterrows():
-            y = int(row['Year'])
-            if 2000 <= y <= MAX_HIST_YEAR:
-                series.append({'x': int(y), 'y': int(row['Total_Refugees'])})
+        # Fallback if cache not ready: Trigger optimized precomputation
+        try:
+            precompute_predictions(2026)
+            if 'all' in SERIES_CACHE:
+                return jsonify(SERIES_CACHE['all'])
+        except Exception as e:
+            print(f"Fallback precomputation failed: {e}")
         
-        # Predicted for All Origins
-        pred_map = {} # year -> sum
-        for c in mapping.keys():
-            c_df = historical_df[historical_df['Country of Origin'] == c].sort_values('Year')
-            if c_df.empty: continue
-            
-            last_y = int(c_df.iloc[-1]['Year'])
-            l1 = int(c_df.iloc[-1]['Total_Refugees'])
-            l2 = int(c_df.iloc[-2]['Total_Refugees'] if len(c_df) > 1 else l1)
-            enc = mapping[c]
-            cy = last_y + 1
-            
-            while cy <= 2030:
-                input_df = pd.DataFrame({'Year': [cy], 'Origin_Encoded': [enc], 'Lag_1': [l1], 'Lag_2': [l2]})
-                p = max(0, int(time_model.predict(input_df)[0]))
-                if cy > MAX_HIST_YEAR:
-                    pred_map[cy] = pred_map.get(cy, 0) + p
-                l2, l1, cy = l1, p, cy + 1
-        
-        for y, val in sorted(pred_map.items()):
-            series.append({'x': y, 'y': val})
-
-    series.sort(key=lambda x: x['x'])
-    return jsonify(series)
+        return jsonify([]) # Return empty if still failed
 
 
 @app.route('/api/news', methods=['GET'])
@@ -339,13 +361,12 @@ def api_news():
     try:
         gdelt_url = 'https://api.gdeltproject.org/api/v2/doc/doc'
         params = {
-            'query': 'refugee displacement India humanitarian',
-            'mode': 'ArtList',
-            'format': 'json',
+            'query': '(refugee OR displacement OR migration) (India OR South Asia)',
+            'mode': 'artlist',
             'maxrecords': 15,
-            'sort': 'DateDesc'
+            'format': 'json'
         }
-        resp = http_requests.get(gdelt_url, params=params, timeout=15)
+        resp = http_requests.get(gdelt_url, params=params, timeout=5)
         if resp.status_code == 200:
             data = resp.json()
             if 'articles' in data and len(data['articles']) > 0:
@@ -365,7 +386,7 @@ def api_news():
     try:
         import xml.etree.ElementTree as ET
         rss_url = 'https://news.un.org/feed/subscribe/en/news/topic/migrants-and-refugees/feed/rss.xml'
-        resp = http_requests.get(rss_url, timeout=10)
+        resp = http_requests.get(rss_url, timeout=5)
         if resp.status_code == 200:
             root = ET.fromstring(resp.content)
             articles = []
@@ -387,8 +408,14 @@ def api_news():
     return jsonify({'articles': [], 'source': 'none', 'error': 'All news sources unavailable'})
 
 
+# ================== STARTUP ==================
+# Precompute for the default year (2026) to ensure fast startup across all environments
+# We run this on module import so it works under Gunicorn as well.
+try:
+    precompute_predictions(2026)
+except Exception as e:
+    print(f"Precomputation failed: {e}")
+
 # ================== RUN ==================
 if __name__ == '__main__':
-    # Precompute for the default year (2026) to ensure fast startup
-    precompute_predictions(2026)
     app.run(debug=False, port=5000)
