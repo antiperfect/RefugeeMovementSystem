@@ -1,5 +1,5 @@
 import { useEffect, useState, useMemo } from 'react';
-import { getEndpoint, fetchWithCache } from '../config/api';
+import { fetchWithCache } from '../config/api';
 
 interface PredictionResult {
   country: string;

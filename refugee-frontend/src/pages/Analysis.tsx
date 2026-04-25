@@ -1,6 +1,6 @@
 import { useEffect, useState, useMemo } from 'react';
 import unData from '../data/undata.json';
-import { getEndpoint, fetchWithCache } from '../config/api';
+import { fetchWithCache } from '../config/api';
 
 interface RefugeeData {
   year: number;

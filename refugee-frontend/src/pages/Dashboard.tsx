@@ -1,7 +1,7 @@
 import { useEffect, useState, useMemo } from 'react';
 import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet';
 import unData from '../data/undata.json';
-import { getEndpoint, fetchWithCache } from '../config/api';
+import { fetchWithCache } from '../config/api';
 import 'leaflet/dist/leaflet.css';
 
 interface RefugeeData {

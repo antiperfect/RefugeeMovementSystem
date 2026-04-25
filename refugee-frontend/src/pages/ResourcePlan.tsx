@@ -1,6 +1,6 @@
 import React from 'react';
 import COUNTRY_OUTLINES from '../data/countryOutlines';
-import { getEndpoint } from '../config/api';
+import { fetchWithCache } from '../config/api';
 
 interface PredictionResult {
   country: string;
@@ -43,11 +43,8 @@ const ResourcePlan = () => {
   React.useEffect(() => {
     const fetchPredictions = async () => {
       try {
-        const res = await fetch(getEndpoint('/api/predict-all?year=2026'));
-        if (res.ok) {
-          const data = await res.json();
-          setPredictions(data.filter((p: PredictionResult) => NEIGHBOR_COUNTRIES.includes(p.country)));
-        }
+        const data = await fetchWithCache('/api/predict-all?year=2026');
+        setPredictions(data.filter((p: PredictionResult) => NEIGHBOR_COUNTRIES.includes(p.country)));
       } catch (err) {
         console.error('Flask API error:', err);
       } finally {
@@ -61,12 +58,9 @@ const ResourcePlan = () => {
   React.useEffect(() => {
     const fetchAlerts = async () => {
       try {
-        const res = await fetch(getEndpoint('/api/news'));
-        if (res.ok) {
-          const data = await res.json();
-          if (data.articles && Array.isArray(data.articles)) {
-            setAlerts(data.articles);
-          }
+        const data = await fetchWithCache('/api/news');
+        if (data.articles && Array.isArray(data.articles)) {
+          setAlerts(data.articles);
         }
       } catch (err) {
         console.error('News API Error:', err);
