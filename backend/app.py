@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
-from flask_compress import Compress
 import joblib
 import pandas as pd
 import json
@@ -9,7 +8,6 @@ import requests as http_requests
 
 app = Flask(__name__)
 CORS(app)
-Compress(app)
 
 # Load models
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))

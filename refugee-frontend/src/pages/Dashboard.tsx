@@ -1,7 +1,7 @@
 import { useEffect, useState, useMemo } from 'react';
 import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet';
 import unData from '../data/undata.json';
-import { fetchWithCache } from '../config/api';
+import { getEndpoint } from '../config/api';
 import 'leaflet/dist/leaflet.css';
 
 interface RefugeeData {
@@ -65,9 +65,12 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchPredictions = async () => {
       try {
-        const data = await fetchWithCache('/api/predict-all?year=2026');
-        setPredictions(data);
-        setApiConnected(true);
+        const res = await fetch(getEndpoint('/api/predict-all?year=2026'));
+        if (res.ok) {
+          const data = await res.json();
+          setPredictions(data);
+          setApiConnected(true);
+        }
       } catch {
         // Flask not running — that's fine, we still have UN data
       }
@@ -93,12 +96,15 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchGrowth = async () => {
       try {
-        const data = await fetchWithCache('/api/series');
-        // Filter for dashboard view (e.g. 2013-2026)
-        setMonthlyGrowth(data.filter((d: any) => d.x >= 2013 && d.x <= 2026).map((d: any) => ({
-          year: d.x,
-          total: d.y
-        })));
+        const res = await fetch(getEndpoint('/api/series'));
+        if (res.ok) {
+          const data = await res.json();
+          // Filter for dashboard view (e.g. 2013-2026)
+          setMonthlyGrowth(data.filter((d: any) => d.x >= 2013 && d.x <= 2026).map((d: any) => ({
+            year: d.x,
+            total: d.y
+          })));
+        }
       } catch (err) {
         console.error('Error fetching growth:', err);
       }
