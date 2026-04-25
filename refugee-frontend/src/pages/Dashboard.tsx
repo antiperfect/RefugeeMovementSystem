@@ -91,14 +91,25 @@ const Dashboard = () => {
   }, [predictions]);
 
   // 12-month growth from UN data
-  const monthlyGrowth = useMemo(() => {
-    const validData = unData as RefugeeData[];
-    const years = [...new Set(validData.map(d => d.year))].sort((a, b) => a - b);
-    const recent = years.slice(-12);
-    return recent.map(year => {
-      const total = validData.filter(d => d.year === year).reduce((s, d) => s + d.refugees, 0);
-      return { year, total };
-    });
+  const [monthlyGrowth, setMonthlyGrowth] = useState<{year: number, total: number}[]>([]);
+  
+  useEffect(() => {
+    const fetchGrowth = async () => {
+      try {
+        const res = await fetch(getEndpoint('/api/series'));
+        if (res.ok) {
+          const data = await res.json();
+          // Filter for dashboard view (e.g. 2013-2026)
+          setMonthlyGrowth(data.filter((d: any) => d.x >= 2013 && d.x <= 2026).map((d: any) => ({
+            year: d.x,
+            total: d.y
+          })));
+        }
+      } catch (err) {
+        console.error('Error fetching growth:', err);
+      }
+    };
+    fetchGrowth();
   }, []);
 
   const maxGrowth = Math.max(...monthlyGrowth.map(g => g.total), 1);
@@ -122,7 +133,7 @@ const Dashboard = () => {
           </div>
 
           <div className="flex-1 bg-surface-dim dark:bg-[#0d1520] relative overflow-hidden" style={{ minHeight: '300px', zIndex: 0 }}>
-            <MapContainer center={[22.5937, 78.9629]} zoom={5} scrollWheelZoom={false} className="w-full h-full">
+            <MapContainer center={[22.5937, 78.9629]} zoom={4} scrollWheelZoom={false} className="w-full h-full">
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
@@ -191,25 +202,48 @@ const Dashboard = () => {
                 <p className="text-xs text-on-surface-variant">Total displacement by year</p>
               </div>
             </div>
-            <div className="h-48 w-full flex items-end justify-between gap-1 mt-4">
-              {monthlyGrowth.map((g, i) => (
-                <div
-                  key={g.year}
-                  className={`w-full rounded-t-sm transition-all duration-300 group relative ${
-                    i === monthlyGrowth.length - 1 ? 'bg-secondary' :
-                    i === monthlyGrowth.length - 2 ? 'bg-primary shadow-[0_0_12px_rgba(0,40,142,0.3)]' :
-                    'bg-surface-container-high dark:bg-white/10'
-                  }`}
-                  style={{ height: `${(g.total / maxGrowth) * 100}%` }}
-                  title={`${g.year}: ${g.total.toLocaleString()}`}
-                >
-                </div>
-              ))}
-            </div>
-            <div className="flex justify-between mt-4 text-[10px] font-bold uppercase text-on-surface-variant tracking-wider">
-              {monthlyGrowth.length > 0 && <span>{monthlyGrowth[0].year}</span>}
-              {monthlyGrowth.length > 5 && <span>{monthlyGrowth[Math.floor(monthlyGrowth.length / 2)].year}</span>}
-              {monthlyGrowth.length > 0 && <span>{monthlyGrowth[monthlyGrowth.length - 1].year}</span>}
+            <div className="h-48 w-full flex items-end justify-between gap-1 mt-4 relative">
+                {(() => {
+                  if (monthlyGrowth.length === 0) return <div className="flex items-center justify-center h-full w-full text-on-surface-variant text-[10px]">Loading trend data...</div>;
+                  
+                  const totals = monthlyGrowth.map(g => g.total);
+                  const max = Math.max(...totals, 1);
+                  const min = Math.min(...totals);
+                  // Use square root scaling consistent with Analysis page
+                  const baseline = min * 0.9;
+                  const range = max - baseline || 1;
+
+                  return (
+                    <div className="flex-1 h-full flex items-end justify-between gap-[1px] w-full relative pb-5">
+                      {monthlyGrowth.map((g, i) => {
+                        const rawPct = (g.total - baseline) / range;
+                        const pct = Math.sqrt(Math.max(0, rawPct)) * 100;
+                        const isLatest = i === monthlyGrowth.length - 1;
+                        const isRecent = i === monthlyGrowth.length - 2;
+                        const showLabel = i === 0 || i === Math.floor(monthlyGrowth.length / 2) || i === monthlyGrowth.length - 1;
+
+                        return (
+                          <div key={g.year} className="flex-1 h-full flex flex-col items-center justify-end relative group">
+                            <div 
+                              className={`w-full rounded-t-sm transition-all duration-700 ${
+                                isLatest ? 'bg-primary shadow-[0_0_8px_rgba(0,40,142,0.3)]' : 
+                                isRecent ? 'bg-primary/60' : 
+                                'bg-primary/20 dark:bg-white/10'
+                              }`}
+                              style={{ height: `${Math.max(10, pct)}%` }}
+                              title={`${g.year}: ${formatNumber(g.total)}`}
+                            />
+                            {showLabel && (
+                              <span className={`absolute -bottom-5 left-1/2 -translate-x-1/2 text-[9px] font-bold whitespace-nowrap ${isLatest ? 'text-primary dark:text-blue-400' : 'text-on-surface-variant'}`}>
+                                {g.year}
+                              </span>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  );
+                })()}
             </div>
           </div>
         </div>
@@ -231,7 +265,7 @@ const Dashboard = () => {
                   <h5 className="font-headline font-bold text-sm">{card.label}</h5>
                 </div>
                 <div className="text-2xl lg:text-3xl font-black text-on-surface dark:text-white">{card.value}</div>
-                <p className="text-[10px] text-on-surface-variant mt-2 font-bold uppercase tracking-wider">ML Prediction — Neighbors</p>
+                <p className="text-[10px] text-on-surface-variant mt-2 font-bold uppercase tracking-wider">ML Prediction</p>
               </div>
             ))}
           </div>

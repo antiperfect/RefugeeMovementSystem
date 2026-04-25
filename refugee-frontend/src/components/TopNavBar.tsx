@@ -49,7 +49,7 @@ const TopNavBar = () => {
         <div className="flex items-center gap-4 lg:gap-8">
           <div className="text-lg lg:text-xl font-black tracking-tighter flex items-center gap-2 group cursor-pointer">
             <span className="material-symbols-outlined text-primary dark:text-blue-400 group-hover:rotate-12 transition-transform duration-300" style={{ fontVariationSettings: "'FILL' 1" }}>public</span>
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-primary dark:from-blue-400 dark:via-teal-400 dark:to-blue-400 bg-gradient-pan bg-[length:200%_auto]">Refugee Prediction System</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-primary dark:from-blue-400 dark:via-teal-400 dark:to-blue-400 bg-gradient-pan bg-[length:200%_auto]">Refugee Movement System</span>
           </div>
         </div>
 
@@ -93,7 +93,7 @@ const TopNavBar = () => {
                     <span className="text-xs font-bold text-on-surface-variant dark:text-gray-500 normal-case">English</span>
                   </div>
                 </div>
-                <p className="text-[10px] text-on-surface-variant dark:text-gray-600 mt-6 text-center normal-case">Refugee Prediction System v1.0</p>
+                <p className="text-[10px] text-on-surface-variant dark:text-gray-600 mt-6 text-center normal-case">Refugee Movement System v1.0</p>
               </div>
             )}
           </div>

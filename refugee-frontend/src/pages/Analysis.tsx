@@ -37,10 +37,18 @@ const Analysis = () => {
   useEffect(() => {
     const fetchPredictions = async () => {
       try {
-        const res = await fetch(getEndpoint('/api/predict-all?year=2026'));
-        if (res.ok) {
-          const data = await res.json();
-          setPredictions(data);
+        // Fetch full series for better trend analysis
+        const seriesRes = await fetch(getEndpoint('/api/series'));
+        if (seriesRes.ok) {
+          const seriesData = await seriesRes.json();
+          // Filter for 2015-2026 range as requested
+          const filtered = seriesData.filter((d: any) => d.x >= 2015 && d.x <= 2026);
+          setPredictions(filtered.map((d: any) => ({
+            country: 'All',
+            year: d.x,
+            refugees: d.y,
+            food: 0, shelter: 0, medical: 0, water: 0, is_neighbor: false
+          })));
           setApiConnected(true);
         }
       } catch { /* Flask not running */ }
@@ -48,34 +56,18 @@ const Analysis = () => {
     fetchPredictions();
   }, []);
 
-  // Compute growth trend from UN data
+  // Compute growth trend
   const growthAnalysis = useMemo(() => {
-    const validData = unData as RefugeeData[];
-    const years = [...new Set(validData.map(d => d.year))].sort((a, b) => a - b);
-    const recentYears = years.filter(y => y >= 2015);
-
-    const yearTotals = recentYears.map(year => ({
-      year,
-      total: validData.filter(d => d.year === year).reduce((s, d) => s + d.refugees, 0)
-    }));
-
-    // Add 2026 prediction if available
-    if (predictions.length > 0) {
-      const predicted2026 = predictions
-        .filter(p => NEIGHBOR_COUNTRIES.includes(p.country))
-        .reduce((s, p) => s + p.refugees, 0);
-      
-      yearTotals.push({
-        year: 2026,
-        total: predicted2026
-      });
-    }
+    const yearTotals = predictions.map(p => ({
+      year: p.year,
+      total: p.refugees
+    })).sort((a, b) => a.year - b.year);
 
     if (yearTotals.length < 2) return { trend: 'Insufficient Data', change: 0, yearTotals };
 
     const first = yearTotals[0].total;
     const last = yearTotals[yearTotals.length - 1].total;
-    const change = ((last - first) / first * 100);
+    const change = first > 0 ? ((last - first) / first * 100) : 0;
 
     return {
       trend: change > 5 ? 'Increasing' : change < -5 ? 'Decreasing' : 'Stable',
@@ -102,14 +94,12 @@ const Analysis = () => {
       .filter(d => d.year === latestYear)
       .reduce((s, d) => s + d.refugees, 0);
 
-    const predictedTotal = predictions
-      .filter(p => NEIGHBOR_COUNTRIES.includes(p.country))
-      .reduce((s, p) => s + p.refugees, 0);
+    const predicted2026 = predictions.find(p => p.year === 2026)?.refugees || 0;
 
-    const diff = predictedTotal - historicalTotal;
+    const diff = predicted2026 - historicalTotal;
     const pctChange = historicalTotal > 0 ? Math.round((diff / historicalTotal) * 100) : 0;
 
-    return { historicalTotal, predictedTotal, diff, pctChange, latestYear };
+    return { historicalTotal, predictedTotal: predicted2026, diff, pctChange, latestYear };
   }, [predictions]);
 
   // Neighbor predictions for detail
@@ -144,29 +134,42 @@ const Analysis = () => {
             <div className="bg-surface-container-lowest dark:bg-[#111827] p-6 md:w-2/3 flex flex-col">
               <h3 className="font-headline text-lg font-bold text-on-surface dark:text-white mb-4">Year-over-Year Totals</h3>
               <div className="h-[200px] w-full flex items-end gap-1 px-1">
-                {growthAnalysis.yearTotals.map((yt) => {
-                  const max = Math.max(...growthAnalysis.yearTotals.map(y => y.total), 1);
-                  const pct = (yt.total / max) * 100;
-                  return (
-                    <div key={yt.year} className="flex-1 h-full flex flex-col items-center group relative" title={`${yt.year}: ${yt.total.toLocaleString()}`}>
-                      <div className="flex-1 w-full flex items-end justify-center relative">
-                        <div
-                          className={`w-full max-w-[32px] rounded-t-sm transition-all duration-500 relative ${
-                            yt.year === 2026 ? 'bg-primary shadow-[0_0_12px_rgba(0,40,142,0.4)]' : 'bg-surface-container-high dark:bg-white/10'
-                          }`}
-                          style={{ height: `${Math.max(2, pct)}%` }}
-                        >
-                          <div className="absolute -top-7 left-1/2 -translate-x-1/2 bg-surface-container-highest dark:bg-white/10 px-1.5 py-0.5 rounded text-[9px] font-bold text-primary dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10 border border-primary/20">
-                            {formatNumber(yt.total)}
+                {(() => {
+                  if (growthAnalysis.yearTotals.length === 0) return <div className="flex items-center justify-center h-full w-full text-on-surface-variant text-sm">Loading trend data...</div>;
+                  
+                  const totals = growthAnalysis.yearTotals.map(y => y.total);
+                  const max = Math.max(...totals, 1);
+                  const min = Math.min(...totals);
+                  // Use a baseline to emphasize differences
+                  const baseline = min * 0.9; 
+                  const range = max - baseline || 1;
+
+                  return growthAnalysis.yearTotals.map((yt) => {
+                    // Use square root scaling to dampen extreme differences between years
+                    const rawPct = (yt.total - baseline) / range;
+                    const pct = Math.sqrt(Math.max(0, rawPct)) * 100;
+                    
+                    return (
+                      <div key={yt.year} className="flex-1 h-full flex flex-col items-center group relative" title={`${yt.year}: ${yt.total.toLocaleString()}`}>
+                        <div className="flex-1 w-full flex items-end justify-center relative">
+                          <div
+                            className={`w-full max-w-[32px] rounded-t-sm transition-all duration-500 relative ${
+                              yt.year === 2026 ? 'bg-primary shadow-[0_0_12px_rgba(0,40,142,0.4)]' : 'bg-primary/20 dark:bg-white/10'
+                            }`}
+                            style={{ height: `${Math.max(15, pct)}%` }}
+                          >
+                            <div className="absolute -top-7 left-1/2 -translate-x-1/2 bg-surface-container-highest dark:bg-white/10 px-1.5 py-0.5 rounded text-[9px] font-bold text-primary dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10 border border-primary/20">
+                              {formatNumber(yt.total)}
+                            </div>
                           </div>
                         </div>
+                        <span className={`text-[8px] font-bold mt-2 ${yt.year === 2026 ? 'text-primary dark:text-blue-400' : 'text-on-surface-variant'}`}>
+                          {yt.year}
+                        </span>
                       </div>
-                      <span className={`text-[8px] font-bold mt-2 ${yt.year === 2026 ? 'text-primary dark:text-blue-400' : 'text-on-surface-variant'}`}>
-                        {yt.year}
-                      </span>
-                    </div>
-                  );
-                })}
+                    );
+                  });
+                })()}
               </div>
             </div>
           </div>

@@ -32,15 +32,61 @@ NEIGHBORS = [
 
 # Cache for predictions
 PREDICTION_CACHE = {}
+SERIES_CACHE = {}
 
 def precompute_predictions(year=2026):
     """Precompute all predictions for a given year to avoid slow runtime calculations."""
-    print(f"Precomputing predictions for {year}...")
+    print(f"Precomputing predictions for {year}...", flush=True)
     for country in mapping.keys():
         result = predict_for_country(country, year)
         if result:
             PREDICTION_CACHE[country] = result
-    print("Precomputation complete.")
+    
+    # Precompute All Origins Series
+    MAX_HIST_YEAR = int(historical_df['Year'].max())
+    print(f"Precomputing All Origins Series (2000-2030). Last historical year: {MAX_HIST_YEAR}", flush=True)
+    series = []
+    
+    # Historical
+    hist_agg = historical_df.groupby('Year')['Total_Refugees'].sum().reset_index()
+    hist_agg.fillna(0, inplace=True)
+    for _, row in hist_agg.iterrows():
+        y = int(row['Year'])
+        if 2000 <= y <= MAX_HIST_YEAR:
+            series.append({'x': int(y), 'y': int(row['Total_Refugees'])})
+    
+    # Predicted
+    pred_map = {}
+    for c in mapping.keys():
+        c_df = historical_df[historical_df['Country of Origin'] == c].sort_values('Year')
+        if c_df.empty: continue
+        
+        last_y = int(c_df.iloc[-1]['Year'])
+        l1 = int(c_df.iloc[-1]['Total_Refugees'])
+        l2 = int(c_df.iloc[-2]['Total_Refugees'] if len(c_df) > 1 else l1)
+        
+        if pd.isna(l1): l1 = 0
+        if pd.isna(l2): l2 = 0
+        
+        enc = mapping[c]
+        cy = last_y + 1
+        
+        while cy <= 2030:
+            input_df = pd.DataFrame({'Year': [cy], 'Origin_Encoded': [enc], 'Lag_1': [l1], 'Lag_2': [l2]})
+            p = max(0, int(time_model.predict(input_df)[0]))
+            
+            # Only add to pred_map if it's AFTER the historical data for this country
+            # and ALSO after the global historical data cutoff to avoid overlaps
+            if cy > MAX_HIST_YEAR:
+                pred_map[cy] = pred_map.get(cy, 0) + p
+            
+            l2, l1, cy = l1, p, cy + 1
+            
+    for y, val in sorted(pred_map.items()):
+        series.append({'x': int(y), 'y': int(val)})
+    
+    SERIES_CACHE['all'] = series
+    print("Precomputation complete.", flush=True)
 
 def predict_for_country(country, year):
     """Run both models for a single country+year and return dict."""
@@ -69,6 +115,9 @@ def predict_for_country(country, year):
     else:
         lag_1 = country_df.iloc[-1]['Total_Refugees']
         lag_2 = country_df.iloc[-2]['Total_Refugees'] if len(country_df) > 1 else lag_1
+        
+        if pd.isna(lag_1): lag_1 = 0
+        if pd.isna(lag_2): lag_2 = 0
         
         current_year = country_df.iloc[-1]['Year'] + 1
         refugees = lag_1 # fallback
@@ -190,6 +239,97 @@ def api_countries():
         'neighbors': [c for c in NEIGHBORS if c in mapping],
         'total': len(countries)
     })
+
+
+@app.route('/api/series', methods=['GET'])
+def api_series():
+    """Return combined historical (2000-MAX_HIST_YEAR) and predicted (MAX_HIST_YEAR+1 - 2030) series.
+    GET /api/series?country=Afghanistan
+    If no country provided, returns sum of all countries.
+    """
+    country = request.args.get('country')
+    series = []
+
+    if country:
+        # Single Country
+        if country not in mapping:
+            return jsonify({'error': 'Country not found'}), 404
+        
+        # Historical
+        MAX_HIST_YEAR = int(historical_df['Year'].max())
+        hist = historical_df[historical_df['Country of Origin'] == country].copy()
+        hist.fillna(0, inplace=True)
+        for _, row in hist.iterrows():
+            y = int(row['Year'])
+            if 2000 <= y <= MAX_HIST_YEAR:
+                series.append({'x': int(y), 'y': int(row['Total_Refugees'])})
+        
+        # Predicted
+        country_df = historical_df[historical_df['Country of Origin'] == country].sort_values('Year')
+        if not country_df.empty:
+            last_y = int(country_df.iloc[-1]['Year'])
+            lag_1 = int(country_df.iloc[-1]['Total_Refugees'])
+            lag_2 = int(country_df.iloc[-2]['Total_Refugees'] if len(country_df) > 1 else lag_1)
+            
+            if pd.isna(lag_1): lag_1 = 0
+            if pd.isna(lag_2): lag_2 = 0
+            
+            origin_encoded = mapping[country]
+            
+            curr_y = last_y + 1
+            while curr_y <= 2030:
+                input_df = pd.DataFrame({
+                    'Year': [curr_y],
+                    'Origin_Encoded': [origin_encoded],
+                    'Lag_1': [lag_1],
+                    'Lag_2': [lag_2]
+                })
+                pred = int(time_model.predict(input_df)[0])
+                pred = max(0, pred)
+                
+                if curr_y > MAX_HIST_YEAR:
+                    series.append({'x': int(curr_y), 'y': int(pred)})
+                
+                lag_2, lag_1 = lag_1, pred
+                curr_y += 1
+    else:
+        # All Origins (Aggregated)
+        if 'all' in SERIES_CACHE:
+            return jsonify(SERIES_CACHE['all'])
+            
+        # Historical
+        MAX_HIST_YEAR = int(historical_df['Year'].max())
+        hist_agg = historical_df.groupby('Year')['Total_Refugees'].sum().reset_index()
+        hist_agg.fillna(0, inplace=True)
+        for _, row in hist_agg.iterrows():
+            y = int(row['Year'])
+            if 2000 <= y <= MAX_HIST_YEAR:
+                series.append({'x': int(y), 'y': int(row['Total_Refugees'])})
+        
+        # Predicted for All Origins
+        pred_map = {} # year -> sum
+        for c in mapping.keys():
+            c_df = historical_df[historical_df['Country of Origin'] == c].sort_values('Year')
+            if c_df.empty: continue
+            
+            last_y = int(c_df.iloc[-1]['Year'])
+            l1 = int(c_df.iloc[-1]['Total_Refugees'])
+            l2 = int(c_df.iloc[-2]['Total_Refugees'] if len(c_df) > 1 else l1)
+            enc = mapping[c]
+            cy = last_y + 1
+            
+            while cy <= 2030:
+                input_df = pd.DataFrame({'Year': [cy], 'Origin_Encoded': [enc], 'Lag_1': [l1], 'Lag_2': [l2]})
+                p = max(0, int(time_model.predict(input_df)[0]))
+                if cy > MAX_HIST_YEAR:
+                    pred_map[cy] = pred_map.get(cy, 0) + p
+                l2, l1, cy = l1, p, cy + 1
+        
+        for y, val in sorted(pred_map.items()):
+            series.append({'x': y, 'y': val})
+
+    series.sort(key=lambda x: x['x'])
+    return jsonify(series)
 
 
 @app.route('/api/news', methods=['GET'])

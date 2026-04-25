@@ -95,24 +95,23 @@ const Predictions = () => {
       .slice(0, 12);
   }, [predictions, searchQuery]);
 
-  // Historical trajectory from UN data
-  const historicalSeries = useMemo(() => {
-    const validData = unData as RefugeeData[];
-    const yearMap = new Map<number, number>();
-
-    const filtered = selectedCountry
-      ? validData.filter(d => d.origin === selectedCountry)
-      : validData;
-
-    filtered.forEach(record => {
-      const current = yearMap.get(record.year) || 0;
-      yearMap.set(record.year, current + record.refugees);
-    });
-
-    return Array.from(yearMap.entries())
-      .map(([year, total]) => ({ x: year, y: total }))
-      .filter(s => s.x >= 2000)
-      .sort((a, b) => a.x - b.x);
+  // Combined Trajectory (Historical + Predicted) from API
+  const [historicalSeries, setHistoricalSeries] = useState<{x: number, y: number}[]>([]);
+  
+  useEffect(() => {
+    const fetchSeries = async () => {
+      try {
+        const url = getEndpoint(selectedCountry ? `/api/series?country=${encodeURIComponent(selectedCountry)}` : '/api/series');
+        const res = await fetch(url);
+        if (res.ok) {
+          const data = await res.json();
+          setHistoricalSeries(data);
+        }
+      } catch (err) {
+        console.error('Error fetching series:', err);
+      }
+    };
+    fetchSeries();
   }, [selectedCountry]);
 
   // Selected country detail
@@ -142,7 +141,7 @@ const Predictions = () => {
               Displacement Predictions
             </h1>
             <p className="text-on-surface-variant dark:text-gray-400 font-medium text-sm lg:text-base max-w-2xl mt-2">
-              ML-powered forecasts using trained models on UNHCR historical data (65 origin countries, 1981–2026).
+              ML-powered forecasts using trained models on UNHCR historical data (65 origin countries, 1964–2030).
             </p>
           </div>
           <div className="flex items-center gap-3">
@@ -152,7 +151,7 @@ const Predictions = () => {
               onChange={e => setPredictionYear(Number(e.target.value))}
               className="bg-surface-container-low dark:bg-white/5 border border-outline-variant/30 dark:border-white/10 rounded-xl px-4 py-2 text-sm font-bold text-on-surface dark:text-white focus:ring-2 focus:ring-primary/30 outline-none transition-all"
             >
-              {[2025, 2026, 2027, 2028, 2029, 2030].map(y => (
+              {Array.from({length: 2030 - 1964 + 1}, (_, i) => 1964 + i).map(y => (
                 <option key={y} value={y}>{y}</option>
               ))}
             </select>
@@ -337,18 +336,19 @@ const Predictions = () => {
               <div className="flex justify-between items-end mb-8 border-b border-outline-variant/20 dark:border-white/5 pb-4">
                 <div>
                   <h3 className="font-headline text-xl lg:text-2xl font-black tracking-tight text-on-surface dark:text-white">
-                    Historical Trajectory {selectedCountry ? `— ${selectedCountry}` : '— All Origins'}
+                    Historical & Predicted Trajectory {selectedCountry ? `— ${selectedCountry}` : '— All Origins'}
                   </h3>
                   <p className="text-on-surface-variant dark:text-gray-400 font-medium text-sm mt-1">
-                    UNHCR verified data, {historicalSeries.length > 0 ? `${historicalSeries[0].x}–2026` : '2000–2026'}
+                    UNHCR historical data blended with ML forecasts, {historicalSeries.length > 0 ? `${historicalSeries[0].x}–2030` : '2000–2030'}
                   </p>
                 </div>
               </div>
 
               <div className="w-full relative mt-4 h-48 lg:h-56">
                 {(() => {
-                  if (historicalSeries.length === 0) {
-                    return <div className="flex items-center justify-center h-full text-on-surface-variant text-sm">No historical data available.</div>;
+                  // Filter out countries with insufficient data (e.g. less than 3 data points)
+                  if (historicalSeries.length < 3) {
+                    return <div className="flex items-center justify-center h-full text-on-surface-variant text-sm">Insufficient data points to plot trajectory.</div>;
                   }
 
                   const maxVal = Math.max(...historicalSeries.map(s => s.y));
