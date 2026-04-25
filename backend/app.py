@@ -30,6 +30,18 @@ NEIGHBORS = [
     'Pakistan', 'Sri Lanka', 'Nepal', 'Bhutan'
 ]
 
+# Cache for predictions
+PREDICTION_CACHE = {}
+
+def precompute_predictions(year=2026):
+    """Precompute all predictions for a given year to avoid slow runtime calculations."""
+    print(f"Precomputing predictions for {year}...")
+    for country in mapping.keys():
+        result = predict_for_country(country, year)
+        if result:
+            PREDICTION_CACHE[country] = result
+    print("Precomputation complete.")
+
 def predict_for_country(country, year):
     """Run both models for a single country+year and return dict."""
     if country not in mapping:
@@ -152,12 +164,16 @@ def api_predict_all():
     Returns array of predictions sorted by refugee count descending.
     """
     year = request.args.get('year', 2026, type=int)
-    results = []
-
-    for country in mapping.keys():
-        result = predict_for_country(country, year)
-        if result:
-            results.append(result)
+    
+    # If it's the default year and we have a cache, use it
+    if year == 2026 and PREDICTION_CACHE:
+        results = list(PREDICTION_CACHE.values())
+    else:
+        results = []
+        for country in mapping.keys():
+            result = predict_for_country(country, year)
+            if result:
+                results.append(result)
 
     # Sort by refugee count descending
     results.sort(key=lambda x: x['refugees'], reverse=True)
@@ -233,4 +249,6 @@ def api_news():
 
 # ================== RUN ==================
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    # Precompute for the default year (2026) to ensure fast startup
+    precompute_predictions(2026)
+    app.run(debug=False, port=5000)
