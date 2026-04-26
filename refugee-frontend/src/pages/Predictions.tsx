@@ -1,5 +1,4 @@
 import { useEffect, useState, useMemo } from 'react';
-import unData from '../data/undata.json';
 import { getEndpoint } from '../config/api';
 import { cachedFetch } from '../utils/cacheFetch';
 
@@ -14,11 +13,7 @@ interface PredictionResult {
   is_neighbor: boolean;
 }
 
-interface RefugeeData {
-  year: number;
-  origin: string;
-  refugees: number;
-}
+
 
 const NEIGHBOR_COUNTRIES = [
   'Afghanistan', 'Bangladesh', 'China', 'Myanmar',
@@ -345,7 +340,6 @@ const Predictions = () => {
 
               <div className="w-full relative mt-4 h-48 lg:h-56">
                 {(() => {
-                  // Filter out countries with insufficient data (e.g. less than 3 data points)
                   if (historicalSeries.length < 3) {
                     return <div className="flex items-center justify-center h-full text-on-surface-variant text-sm">Insufficient data points to plot trajectory.</div>;
                   }
