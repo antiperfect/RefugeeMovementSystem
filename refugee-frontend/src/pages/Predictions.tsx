@@ -45,7 +45,7 @@ const Predictions = () => {
         setPredictions(data);
       } catch (err: any) {
         console.error('Flask API error:', err);
-        setError('Could not connect to prediction server. Make sure Flask is running on port 5000.');
+        setError('Connecting to prediction engine... (Server may be waking up)');
       } finally {
         setLoading(false);
       }
@@ -158,7 +158,7 @@ const Predictions = () => {
             <span className="material-symbols-outlined">error</span>
             <div>
               <p className="font-bold text-sm">{error}</p>
-              <p className="text-xs mt-1 opacity-80">Run: <code className="bg-black/10 px-2 py-0.5 rounded">python app.py</code> in Kiran's prediction system folder</p>
+              <p className="text-xs mt-1 opacity-80">The system is attempting to initialize the ML models on Hugging Face. Please wait a moment.</p>
             </div>
           </div>
         )}
@@ -168,7 +168,10 @@ const Predictions = () => {
           <div className="flex justify-center items-center py-20">
             <div className="flex flex-col items-center gap-4">
               <span className="material-symbols-outlined text-4xl text-primary animate-spin">progress_activity</span>
-              <span className="text-sm font-bold text-on-surface-variant">Loading predictions from ML model...</span>
+              <span className="text-sm font-bold text-on-surface-variant text-center">
+                Loading predictions from ML model...<br/>
+                <span className="text-[10px] opacity-70 font-normal">Waking up Hugging Face Space</span>
+              </span>
             </div>
           </div>
         )}

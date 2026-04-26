@@ -264,9 +264,12 @@ const ResourcePlan = () => {
                     ))}
                   </div>
                 ) : (
-                  <div className="p-8 text-center text-on-surface-variant text-sm">
-                    Flask prediction server not connected.<br />
-                    <code className="text-xs bg-surface-container-high dark:bg-white/10 px-2 py-1 rounded mt-2 inline-block">python app.py</code>
+                  <div className="flex-1 flex flex-col items-center justify-center py-12 text-on-surface-variant text-sm text-center">
+                    <span className="material-symbols-outlined animate-spin text-3xl text-primary mb-4">progress_activity</span>
+                    <div>
+                      Connecting to prediction engine...<br />
+                      <span className="text-[10px] opacity-70">Initializing ML models on Hugging Face.</span>
+                    </div>
                   </div>
                 )}
               </div>
@@ -295,7 +298,10 @@ const ResourcePlan = () => {
                 );
               })}
               {predictions.length === 0 && !loading && (
-                <div className="col-span-full text-center text-on-surface-variant text-xs py-4">Connect Flask server for data</div>
+                <div className="col-span-full text-center text-on-surface-variant text-xs py-4 flex flex-col items-center gap-2">
+                  <span className="material-symbols-outlined animate-spin text-xl text-primary">progress_activity</span>
+                  <span>Connecting to data source...</span>
+                </div>
               )}
             </div>
           </div>

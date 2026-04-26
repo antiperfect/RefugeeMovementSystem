@@ -72,7 +72,7 @@ const Dashboard = () => {
           setApiConnected(true);
         }
       } catch {
-        // Flask not running — that's fine, we still have UN data
+        // Backend engine not responding — that's fine, we still have UN data
       }
     };
     fetchPredictions();
@@ -203,7 +203,12 @@ const Dashboard = () => {
             </div>
             <div className="h-48 w-full flex items-end justify-between gap-1 mt-4 relative">
                 {(() => {
-                  if (monthlyGrowth.length === 0) return <div className="flex items-center justify-center h-full w-full text-on-surface-variant text-[10px]">Loading trend data...</div>;
+                  if (monthlyGrowth.length === 0) return (
+                    <div className="flex items-center justify-center h-full w-full text-on-surface-variant text-[10px] flex-col gap-2">
+                      <span className="material-symbols-outlined animate-spin text-sm">progress_activity</span>
+                      <span>Loading trend data...</span>
+                    </div>
+                  );
                   
                   const totals = monthlyGrowth.map(g => g.total);
                   const max = Math.max(...totals, 1);
@@ -247,7 +252,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        {/* Bottom Row — ML Predictions Summary (only if Flask is connected) */}
+        {/* Bottom Row — ML Predictions Summary (only if backend is connected) */}
         {apiConnected && (
           <div className="col-span-12 grid grid-cols-1 md:grid-cols-4 gap-4 lg:gap-6">
             {[

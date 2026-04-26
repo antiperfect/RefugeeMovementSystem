@@ -199,9 +199,12 @@ const Analysis = () => {
                 </div>
               ) : (
                 <div className="flex-1 flex items-center justify-center text-on-surface-variant text-sm text-center">
-                  <div>
-                    Connect Flask server for comparison<br/>
-                    <code className="text-xs bg-surface-container-high dark:bg-white/10 px-2 py-1 rounded mt-2 inline-block">python app.py</code>
+                  <div className="flex flex-col items-center gap-3">
+                    <span className="material-symbols-outlined animate-spin text-2xl text-primary">progress_activity</span>
+                    <div>
+                      Connecting to prediction engine...<br/>
+                      <span className="text-[10px] opacity-70">This may take a moment if the server is waking up.</span>
+                    </div>
                   </div>
                 </div>
               )}
@@ -262,7 +265,7 @@ const Analysis = () => {
                   <span className="font-body text-sm text-on-surface">Random Forest Model</span>
                 </div>
                 <span className={`font-label text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wider font-semibold ${apiConnected ? 'bg-secondary-container text-on-secondary-container' : 'bg-error-container text-on-error-container'}`}>
-                  {apiConnected ? 'Connected' : 'Offline'}
+                  {apiConnected ? 'Connected' : 'Connecting...'}
                 </span>
               </div>
               <div className="bg-surface-container-lowest dark:bg-white/5 p-3 rounded-lg flex items-center justify-between">
