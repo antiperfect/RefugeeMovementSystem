@@ -112,7 +112,6 @@ const Dashboard = () => {
     fetchGrowth();
   }, []);
 
-  const maxGrowth = Math.max(...monthlyGrowth.map(g => g.total), 1);
 
   return (
     <div className="p-4 sm:p-6 lg:p-12 space-y-6 lg:space-y-8 max-w-[1600px] mx-auto w-full animate-fade-in-up">
