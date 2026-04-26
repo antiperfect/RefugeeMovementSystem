@@ -1,7 +1,6 @@
 import { useEffect, useState, useMemo } from 'react';
 import unData from '../data/undata.json';
 import { getEndpoint } from '../config/api';
-import { cachedFetch } from '../utils/cacheFetch';
 
 interface RefugeeData {
   year: number;
@@ -36,24 +35,25 @@ const Analysis = () => {
   const [apiConnected, setApiConnected] = useState(false);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchPredictions = async () => {
       try {
-        const url = getEndpoint('/api/series');
-        const data = await cachedFetch(url);
-        // Filter for trend (e.g. 2015-2026)
-        const trendData = data.filter((d: any) => d.x >= 2015 && d.x <= 2026);
-        setPredictions(trendData.map((d: any) => ({
-          country: 'All',
-          year: d.x,
-          refugees: d.y,
-          food: 0, shelter: 0, medical: 0, water: 0, is_neighbor: false
-        })));
-        setApiConnected(true);
-      } catch (err) {
-        console.error('Error fetching analysis data:', err);
-      }
+        // Fetch full series for better trend analysis
+        const seriesRes = await fetch(getEndpoint('/api/series'));
+        if (seriesRes.ok) {
+          const seriesData = await seriesRes.json();
+          // Filter for 2015-2026 range as requested
+          const filtered = seriesData.filter((d: any) => d.x >= 2015 && d.x <= 2026);
+          setPredictions(filtered.map((d: any) => ({
+            country: 'All',
+            year: d.x,
+            refugees: d.y,
+            food: 0, shelter: 0, medical: 0, water: 0, is_neighbor: false
+          })));
+          setApiConnected(true);
+        }
+      } catch { /* Flask not running */ }
     };
-    fetchData();
+    fetchPredictions();
   }, []);
 
   // Compute growth trend

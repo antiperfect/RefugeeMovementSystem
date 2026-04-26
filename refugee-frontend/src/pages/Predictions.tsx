@@ -1,6 +1,6 @@
 import { useEffect, useState, useMemo } from 'react';
+import unData from '../data/undata.json';
 import { getEndpoint } from '../config/api';
-import { cachedFetch } from '../utils/cacheFetch';
 
 interface PredictionResult {
   country: string;
@@ -13,7 +13,11 @@ interface PredictionResult {
   is_neighbor: boolean;
 }
 
-
+interface RefugeeData {
+  year: number;
+  origin: string;
+  refugees: number;
+}
 
 const NEIGHBOR_COUNTRIES = [
   'Afghanistan', 'Bangladesh', 'China', 'Myanmar',
@@ -41,8 +45,9 @@ const Predictions = () => {
       setLoading(true);
       setError(null);
       try {
-        const url = getEndpoint(`/api/predict-all?year=${predictionYear}`);
-        const data = await cachedFetch(url);
+        const res = await fetch(getEndpoint(`/api/predict-all?year=${predictionYear}`));
+        if (!res.ok) throw new Error(`API returned ${res.status}`);
+        const data = await res.json();
         setPredictions(data);
       } catch (err: any) {
         console.error('Flask API error:', err);
@@ -96,11 +101,12 @@ const Predictions = () => {
   useEffect(() => {
     const fetchSeries = async () => {
       try {
-        const url = selectedCountry 
-          ? getEndpoint(`/api/series?country=${selectedCountry}`)
-          : getEndpoint('/api/series');
-        const data = await cachedFetch(url);
-        setHistoricalSeries(data);
+        const url = getEndpoint(selectedCountry ? `/api/series?country=${encodeURIComponent(selectedCountry)}` : '/api/series');
+        const res = await fetch(url);
+        if (res.ok) {
+          const data = await res.json();
+          setHistoricalSeries(data);
+        }
       } catch (err) {
         console.error('Error fetching series:', err);
       }
@@ -340,6 +346,7 @@ const Predictions = () => {
 
               <div className="w-full relative mt-4 h-48 lg:h-56">
                 {(() => {
+                  // Filter out countries with insufficient data (e.g. less than 3 data points)
                   if (historicalSeries.length < 3) {
                     return <div className="flex items-center justify-center h-full text-on-surface-variant text-sm">Insufficient data points to plot trajectory.</div>;
                   }

@@ -2,7 +2,6 @@ import { useEffect, useState, useMemo } from 'react';
 import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet';
 import unData from '../data/undata.json';
 import { getEndpoint } from '../config/api';
-import { cachedFetch } from '../utils/cacheFetch';
 import 'leaflet/dist/leaflet.css';
 
 interface RefugeeData {
@@ -66,10 +65,12 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchPredictions = async () => {
       try {
-        const url = getEndpoint('/api/predict-all?year=2026');
-        const data = await cachedFetch(url);
-        setPredictions(data);
-        setApiConnected(true);
+        const res = await fetch(getEndpoint('/api/predict-all?year=2026'));
+        if (res.ok) {
+          const data = await res.json();
+          setPredictions(data);
+          setApiConnected(true);
+        }
       } catch {
         // Flask not running — that's fine, we still have UN data
       }
@@ -95,13 +96,15 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchGrowth = async () => {
       try {
-        const url = getEndpoint('/api/series');
-        const data = await cachedFetch(url);
-        // Filter for dashboard view (e.g. 2013-2026)
-        setMonthlyGrowth(data.filter((d: any) => d.x >= 2013 && d.x <= 2026).map((d: any) => ({
-          year: d.x,
-          total: d.y
-        })));
+        const res = await fetch(getEndpoint('/api/series'));
+        if (res.ok) {
+          const data = await res.json();
+          // Filter for dashboard view (e.g. 2013-2026)
+          setMonthlyGrowth(data.filter((d: any) => d.x >= 2013 && d.x <= 2026).map((d: any) => ({
+            year: d.x,
+            total: d.y
+          })));
+        }
       } catch (err) {
         console.error('Error fetching growth:', err);
       }
@@ -109,7 +112,7 @@ const Dashboard = () => {
     fetchGrowth();
   }, []);
 
-
+  const maxGrowth = Math.max(...monthlyGrowth.map(g => g.total), 1);
 
   return (
     <div className="p-4 sm:p-6 lg:p-12 space-y-6 lg:space-y-8 max-w-[1600px] mx-auto w-full animate-fade-in-up">
