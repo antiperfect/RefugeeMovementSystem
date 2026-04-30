@@ -97,8 +97,8 @@ The dashboard will be available at **[http://localhost:5173](http://localhost:51
 | :--- | :--- |
 | **Shashank Pradhan** | Frontend and Full-Stack Integration |
 | **Kiran Vishwakarma** | Backend Architecture and ML Training |
-| **Jasleen Kaur** | Documentation and Research Paper |
-| **Rani Pari Gupta** | Research Paper |
+| **Jasleen Kaur** | Research Paper and Documentation |
+| **Rani Pari Gupta** | Documentation |
 
 ---
 
